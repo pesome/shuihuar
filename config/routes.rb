@@ -1,4 +1,10 @@
 Blog::Application.routes.draw do
+  get "user/index"
+
+  get "user/login"
+
+  get "user/logout"
+
   resources :people
 
   resources :groups
