@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class UserControllerTest < ActionController::TestCase
-  test "should get back_information" do
-    get :back_information
+  test "should get basic_information" do
+    get :basic_information
     assert_response :success
   end
 

@@ -1,10 +1,11 @@
 Blog::Application.routes.draw do
-  get "user/back_information"
+  
+  
+  get "user/basic_information"
+
 
   get "home/index"
-  get "user/index"
-  get "user/login"
-  get "user/logout"
+  
   
   resources :users do
     resources :groups

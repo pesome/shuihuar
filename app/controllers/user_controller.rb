@@ -1,4 +1,4 @@
 class UserController < ApplicationController
-  def back_information
+  def basic_information
   end
 end
