@@ -139,3 +139,51 @@ ul, li {list-style: none;}
 	text-decoration: none;
 	color:#EFEFEF;
 }
+.search-list-wrap{
+    position: absolute;
+    left: 751px;
+    top: 20px;
+    float: right;
+    width:240px;
+    height:27px;
+    z-index: 100;
+}
+.search-list-wrap .input-search{
+    width:100%;
+    height: 27px;
+}
+.search-list-wrap .search-submit{
+    position: absolute;
+    background: url('../../Home_files/u49_normal.png');
+    width:30px;
+    height: 22px;
+    border: none;
+    top:3px;
+    right: 3px;
+    cursor: pointer;
+}
+
+.search-list {
+    min-width: 240px;
+    border: solid 1px #cccccc;
+    background: #fff;
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 27px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.search-list li{
+    padding-left: 10px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.search-list li:hover{
+    background: #ccc;
+    cursor: pointer;
+}
+.search-list .key{
+    color: red;
+}

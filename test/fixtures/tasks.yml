@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  expect_begin_time: 
+  expect_end_time: 
+  begin_time: 
+  end_time: 
+  owner: 1
+  description: MyText
+  status: 1
+  assign_user: 1
+
+two:
+  name: MyString
+  expect_begin_time: 
+  expect_end_time: 
+  begin_time: 
+  end_time: 
+  owner: 1
+  description: MyText
+  status: 1
+  assign_user: 1

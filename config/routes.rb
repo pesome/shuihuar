@@ -1,21 +1,28 @@
 Blog::Application.routes.draw do
-  get "user/index"
+  devise_for :users
 
-  get "user/login"
-
-  get "user/logout"
-
-  resources :people
-
-  resources :groups
-
-  resources :posts do
-    resources :comments
+  resources :users do
+    resources :groups
+    resources :tasks
+    resources :user_reviews
+    resources :follow_users
   end
   
+  resources :groups do
+    resources :users
+    resources :categories
+    resources :tasks do
+      resources :task_reviews
+    end
+    resources :group_reviews
+    resources :follow_groups
+  end
+
   get "home/index"
- 
-  
+  get "user/index"
+  get "user/login"
+  get "user/logout"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   

@@ -1,11 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  max_person: 
-  description: MyString
+  name: MyString
+  description: 
+  label: MyString
+  image_url: MyString
+  owner: 1
+  is_public: false
 
 two:
-  title: MyString
-  max_person: 
-  description: MyString
+  name: MyString
+  description: 
+  label: MyString
+  image_url: MyString
+  owner: 1
+  is_public: false
