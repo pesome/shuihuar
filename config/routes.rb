@@ -6,12 +6,20 @@ Blog::Application.routes.draw do
   
   resources :users do
     resources :groups
+    resources :tasks
     resources :user_reviews
     resources :follow_users
   end
   
-  resources :groups
-  resources :categories
+  resources :groups do
+    resources :users
+    resources :categories
+    resources :tasks do
+      resources :task_reviews
+    end
+    resources :group_reviews
+    resources :follow_groups
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

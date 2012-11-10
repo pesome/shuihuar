@@ -1,4 +1,5 @@
 class Group < ActiveRecord::Base
+  has_many :tasks
   has_many :group_reviews
   has_many :follow_groups
   
