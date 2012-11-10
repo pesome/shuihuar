@@ -17,6 +17,8 @@ Blog::Application.routes.draw do
     resources :group_reviews
     resources :follow_groups
   end
+  
+  resources :tasks
 
   get "home/index"
   get "user/index"
