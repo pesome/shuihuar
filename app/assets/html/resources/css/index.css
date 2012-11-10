@@ -1,0 +1,93 @@
+﻿/* --- common --- */
+body {
+	background: rgba(246,246,246,1);
+}
+/* --- page header --- */
+.theme-word {
+	padding:0px 15px;
+	font-family:"microsoft YaHei";
+	font-size:30px;
+	font-weight:bold;
+	font-style:normal;
+	text-decoration:none;
+	color:#2b9bea;
+}
+.theme-desc {
+	padding:0px 15px;
+	border-left:1px solid #CCC;
+	font-family:"microsoft YaHei";
+	font-style:normal;
+	text-decoration:none;
+	color:#666;
+}
+.focus-idea {
+	font-family:"microsoft YaHei";
+	font-size:20px;
+	font-style:normal;
+	text-decoration:none;
+	color:#FF0099;
+}
+.hot-team {
+	font-family:"microsoft YaHei";
+	font-size:20px;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none;
+	color:#666666;
+}
+.team-link {
+	font-family:"microsoft YaHei";
+	font-size:16px;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none;
+	color:#666666;
+}
+.team-link:hover {
+	color:#08c;
+	text-decoration: none;
+}
+.input-normal {
+	border:1px solid #ccc;
+	padding:2px 3px;
+}
+.login-input {
+	width: 174px;
+	height: 30px;
+	border: 0 none;
+	border: 1px solid #CCC;
+	padding:2px 3px;
+	color:#FF6D00;
+	font-size: 14px;
+}
+.button, .btns {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #e0e0e0) );
+	display:inline-block;
+	color:#555;
+	font-size:12px;
+	padding:6px 10px 6px 10px;
+	cursor:pointer;
+  text-decoration:none;
+  background-color: #E0E0E0;
+  background-image: linear-gradient(to bottom, #FAFAFA 0px, #DCDCDC 100%);
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bolder;
+  border-color: #CCCCCC #CCCCCC #AAAAAA;
+  box-shadow: 0 0 1px #FFFFFF inset;
+  text-shadow: 1px 1px 1px #FFFFFF;
+}
+.btns, .button:hover {
+  background-image: linear-gradient(to bottom, #F0F0F0 0px, #E6E6E6 100%);
+  border-color: #AAAAAA #AAAAAA #999999;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
+	text-decoration:none;
+}
+.login-btn {padding:5px 10px;}
+.forget-word {
+	font-family:"microsoft YaHei";
+	font-size:12px;
+	font-style:normal;
+	text-decoration:none;
+	color:#06C;
+}
