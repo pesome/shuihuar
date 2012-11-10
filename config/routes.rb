@@ -6,15 +6,16 @@ Blog::Application.routes.draw do
   get "user/login"
 
   get "user/logout"
-
-  resources :people
-
-  resources :groups
-
-  resources :posts do
-    resources :comments
+  
+  resources :users do
+    resources :groups
+    resources :user_reviews
+    resources :follow_users
   end
   
+  resources :groups
+  resources :categories
+
   get "home/index"
  
   
