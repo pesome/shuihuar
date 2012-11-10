@@ -15,21 +15,22 @@ define(function (require, exports, module) {
     var Join = require('./join')
     $('.join-team').click(function(){
         new Join(this);
-    })
+    });
+
+    // like
+    var Like = require('./like');
+    $('.J_like').click(function (e) {
+        var btn = $(this);
+        e.preventDefault();
+        Like.like(btn.attr('group_id'), function () {
+            var number = btn.next();
+            number.text(+number.text() + 1);
+        });
+    });
 
     return;
     //init login
     var Login = require('./log');
     new Login($());
-
-    // like
-    var Like = require('./like');
-    $('.J_like').click(function () {
-        var btn = $(this);
-        Like.like(btn.attr('group_id'), function () {
-            var number = btn.next();
-            number.text(number.text() + 1);
-        });
-    });
 
 });
