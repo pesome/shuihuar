@@ -15,7 +15,7 @@ class TasksController < ApplicationController
   def show
     #task.joins(:user,:task)
     @task = Task.find(params[:id])
-
+    @user = @task.user
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @task }
@@ -26,7 +26,7 @@ class TasksController < ApplicationController
   # GET /tasks/new.json
   def new
     @task = Task.new
-
+    @owner = @task.
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @task }
@@ -81,4 +81,5 @@ class TasksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end

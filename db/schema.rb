@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(:version => 20121110101805) do
     t.datetime "expect_end_time"
     t.datetime "begin_time"
     t.datetime "end_time"
-    t.integer  "owner"
+    t.integer  "user_id"
     t.text     "description"
     t.integer  "status"
     t.integer  "assign_user"
