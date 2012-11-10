@@ -2,6 +2,8 @@
 body {
 	background: rgba(246,246,246,1);
 }
+ul, li { margin:0; padding:0;}
+ul, li {list-style: none;}
 /* --- page header --- */
 .theme-word {
 	padding:0px 15px;
@@ -85,9 +87,103 @@ body {
 }
 .login-btn {padding:5px 10px;}
 .forget-word {
-	font-family:"microsoft YaHei";
 	font-size:12px;
 	font-style:normal;
 	text-decoration:none;
 	color:#06C;
+}
+.remember-me {
+	font-family:"microsoft YaHei";
+	font-size:12px;
+	font-style:normal;
+	text-decoration:none;
+	color:#666;
+}
+.team-sort {
+	position: absolute;
+	top:431px;
+	left:11px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,169,218,1)), color-stop(100%,rgba(1,186,227,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,169,218,1) 0%,rgba(1,186,227,1) 100%); /* Chrome10+,Safari5.1+ */
+	width:722px;
+	height:30px;
+}
+.team-sort1 {
+	position: absolute;
+	top:825px;
+	left:11px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(26,144,75,1)), color-stop(100%,rgba(27,169,89,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(26,144,75,1) 1%,rgba(27,169,89,1) 100%); /* Chrome10+,Safari5.1+ */
+	width:722px;
+	height:30px;
+}
+.team-items li {
+	float:left;
+	height:30px;
+	line-height: 30px;
+	margin-left:30px;
+}
+.team-items li.team-title {
+	background-color: #f63d87;
+	color:#FFF;
+	margin-left:0px;
+	padding: 0 20px;
+}
+.team-items a {
+	text-decoration: none;
+	color:#FFF;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei';
+}
+.team-items a:hover {
+	text-decoration: none;
+	color:#EFEFEF;
+}
+.search-list-wrap{
+    position: absolute;
+    left: 751px;
+    top: 20px;
+    float: right;
+    width:240px;
+    height:27px;
+    z-index: 100;
+}
+.search-list-wrap .input-search{
+    width:100%;
+    height: 27px;
+}
+.search-list-wrap .search-submit{
+    position: absolute;
+    background: url('../../Home_files/u49_normal.png');
+    width:30px;
+    height: 22px;
+    border: none;
+    top:3px;
+    right: 3px;
+    cursor: pointer;
+}
+
+.search-list {
+    min-width: 240px;
+    border: solid 1px #cccccc;
+    background: #fff;
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 27px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.search-list li{
+    padding-left: 10px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.search-list li:hover,.search-list li.hover{
+    background: #efefef;
+    cursor: pointer;
+}
+.search-list .key{
+    color: red;
 }
