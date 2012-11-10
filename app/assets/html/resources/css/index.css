@@ -1,8 +1,8 @@
-﻿/* --- common --- */
+/* --- common --- */
 body {
 	background: rgba(246,246,246,1);
 }
-ul, li { margin:0; padding:0;}
+h3, ul, li { margin:0; padding:0;font-weight: normal;}
 ul, li {list-style: none;}
 /* --- page header --- */
 .theme-word {
@@ -117,6 +117,15 @@ ul, li {list-style: none;}
 	width:722px;
 	height:30px;
 }
+.team-sort2 {
+	position: absolute;
+	top:1218px;
+	left:11px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(212,109,47,1)), color-stop(100%,rgba(221,109,38,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(212,109,47,1) 0%,rgba(221,109,38,1) 100%); /* Chrome10+,Safari5.1+ */
+	width:722px;
+	height:30px;
+}
 .team-items li {
 	float:left;
 	height:30px;
@@ -188,6 +197,190 @@ ul, li {list-style: none;}
     color: red;
 }
 
+/* ----------------  */
+
+.travel-block {
+	position: absolute;
+	top:860px;
+	left:11px;
+	width:722px;
+	height:354px;
+}
+
+.travel-list {
+	height: 348px;
+}
+.travel-list li {
+	width: 236px;
+	height: 346px;
+	float: left;
+	margin-left:4px;
+}
+.travel-item {
+	height: 300px;
+	border:1px solid #CCC;
+	background-color: #FFF;
+}
+.travel-item h3 {
+	height: 34px;
+	line-height: 34px;
+	color:#3CF;
+	font-size: 14px;
+	padding:0 10px;
+	border-bottom:1px dotted #CCC;
+}
+.travel-owner {
+	height: 28px;
+	border:1px solid #CCC;
+	background-color: #FFF;
+	margin-top:6px;
+	padding:6px 10px;
+}
+.travel-owner a {
+	display: block;
+	width: 31px;
+	height: 30px;
+	float: left;
+}
+/*  ---------------  */
+
+.code-block {
+	position: absolute;
+	top:1254px;
+	left:11px;
+	width:722px;
+	height:354px;
+}
+
+.code-list {
+	height: 348px;
+}
+.code-list li {
+	width: 236px;
+	height: 346px;
+	float: left;
+	margin-left:4px;
+}
+.code-item {
+	height: 300px;
+	border:1px solid #CCC;
+	background-color: #FFF;
+}
+.code-item h3 {
+	height: 34px;
+	line-height: 34px;
+	color:#3CF;
+	font-size: 14px;
+	padding:0 10px;
+	border-bottom:1px dotted #CCC;
+}
+.code-owner {
+	height: 28px;
+	border:1px solid #CCC;
+	background-color: #FFF;
+	margin-top:6px;
+	padding:6px 10px;
+}
+.code-owner a {
+	display: block;
+	width: 31px;
+	height: 30px;
+	float: left;
+}
+
+/*  ---------------- */
+
+
+.welfare-block {
+	position: absolute;
+	top:467px;
+	left:11px;
+	width:722px;
+	height:354px;
+}
+
+.welfare-list {
+	height: 348px;
+}
+.welfare-list li {
+	width: 236px;
+	height: 346px;
+	float: left;
+	margin-left:4px;
+}
+.welfare-item {
+	height: 300px;
+	border:1px solid #CCC;
+	background-color: #FFF;
+}
+.welfare-item h3 {
+	height: 34px;
+	line-height: 34px;
+	color:#3CF;
+	font-size: 14px;
+	padding:0 10px;
+	border-bottom:1px dotted #CCC;
+}
+.join-team {
+	padding: 5px 10px;
+	display: inline;
+	margin-left: 60px;
+	border-radius: 2px;
+}
+.welfare-owner {
+	height: 28px;
+	border:1px solid #CCC;
+	background-color: #FFF;
+	margin-top:6px;
+	padding:6px 10px;
+}
+.welfare-owner a {
+	display: block;
+	width: 31px;
+	height: 30px;
+	float: left;
+}
+.welfare-link {
+	display: block;
+	padding:9px;
+	width:215px;
+	height: 195px;
+	border-bottom: 1px dotted #ccc;
+}
+.white-btn {
+	background: url(../images/like.png) -200px -80px no-repeat;
+	display: block;
+	width: 58px;
+	height: 23px;
+	float: left;
+	text-indent: -9999px;
+	margin-left:20px;
+	margin-top:10px;
+}
+.like-add {
+	float: left;
+	display: block;
+	width: 60px;
+	height: 23px;
+	line-height: 23px;
+	margin-top:10px;
+	margin-left:20px;
+	text-align: center;
+	font-size: 12px;
+	font-family:"microsoft YaHei";
+	border-radius: 3px;
+	border:1px solid #CCC;
+}
+
+.owner-name {
+	display: block;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	font-size: 14px;
+	margin-left:12px;
+	color:#3CF;
+}
 /*首页slide*/
 .slide{
     width:720px;
