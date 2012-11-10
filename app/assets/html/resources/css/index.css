@@ -180,8 +180,8 @@ ul, li {list-style: none;}
     line-height: 30px;
     font-size: 12px;
 }
-.search-list li:hover{
-    background: #ccc;
+.search-list li:hover,.search-list li.hover{
+    background: #efefef;
     cursor: pointer;
 }
 .search-list .key{
