@@ -15,6 +15,17 @@
   <b>Is_public:</b>
   <%= @group.is_public %>
 </p>
+<p>
+   <td><%= link_to 'Edit', edit_group_path(@group) %></td>
+</p>
+<h2>标签:</h2>
+<table>
+	<tr>
+	<% @group.categories.each do |category| %>
+    	<td><%= category.name %></td>
+	<% end %> 
+	</tr>   
+</table>
 
 <h2>Users:</h2>
 <table>
@@ -32,12 +43,8 @@
 <% end %> 
 </table>
 
-<h2>Reviews:</h2>
+<h2>所有评论:</h2>
 <table>
-<tr>
-    <th>id</th>
-    <th>context</th>
-</tr>
 <% @group.group_reviews.each do |group_review| %>
 <tr>
     <td><%= group_review.id %></td>
@@ -46,12 +53,8 @@
 <% end %> 
 </table>
 
-<h2>Tasks:</h2>
+<h2>所有任务:</h2>
 <table>
-<tr>
-    <th>id</th>
-    <th>name</th>
-</tr>
 <% @group.tasks.each do |task| %>
 <tr>
     <td><%= task.id %></td>
