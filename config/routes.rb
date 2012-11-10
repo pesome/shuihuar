@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  get "user/back_information"
+
   get "home/index"
 
   resources :users
