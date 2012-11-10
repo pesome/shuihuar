@@ -8,6 +8,16 @@
     <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet">
     <link href="Home_files/axurerp_pagespecificstyles.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/css/index.css">
+<!--[if IE 6]>
+    <link href="Home_files/axurerp_pagespecificstyles_ie6.css" type="text/css" rel="stylesheet">
+<![endif]-->
+    <script src="data/sitemap.js"></script>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/axurerp_beforepagescript.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+<script src='Home_files/data.js'></script>
 </head>
 <body>
 <div id="main_container">
@@ -49,11 +59,6 @@
 <div id="u12" class="u12" style="visibility:hidden;"  >
 <div id="u12_rtf"></div>
 </div>
-</div>
-<div id="u13" class="u13"  >
-<div id="u13_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">查看更多…</span></p></div>
-</div><div id="u14" class="u14" >
-<DIV id="u14_line" class="u14_line" ></DIV>
 </div>
 <div id="u15" class="u15"  >
 <div id="u15_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">黄小鑫</span></p></div>
@@ -153,11 +158,13 @@
 <div id="u47" class="u47"  >
 <div id="u47_rtf"><p style="text-align:left;"><span class="hot-team">小组</span></p></div>
 </div>
-<div class="search-list-wrap">
-    <input id="J_search" type="text" placeholder="team" class=" input-normal input-search ">
-    <input type="button" class="search-submit">
-    <ul id="J_search_list" class="search-list">
-    </ul>
+<input id="u48" type="text" value="team" class="u48 input-normal">
+
+<div id="u49" class="u49_container"   >
+<div id="u49_img" class="u49_normal detectCanvas"></div>
+<div id="u50" class="u50" style="visibility:hidden;"  >
+<div id="u50_rtf"></div>
+</div>
 </div>
 <div id="u51" class="u51_container"   >
 <div id="u51_img" class="u51_normal detectCanvas"></div>
@@ -195,13 +202,13 @@
 <div id="u61" class="u61_container">
 <button class="button login-btn">登 录</button>
 </div>
-<DIV id="u63container" style="position:absolute; left:857px; top:178px; width:66px; height:20px; ; ; ;" >
-<LABEL for="u63">
+<DIV id="u63container" style="position:absolute; left:857px; top:178px; width:66px; height:20px;" >
+<label for="u63">
 <div id="u64" class="u64"  >
-<div id="u64_rtf"><p style="text-align:left;"><span style="font-family:"Microsoft YaHei";font-size:12px;font-weight:normal;font-style:normal;text-decoration:none;color:#666;">记住我</span></p></div>
+<div id="u64_rtf"><p style="text-align:left;"><span class="remember-me">记住我</span></p></div>
 </div>
-</LABEL>
-<INPUT id="u63" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</label>
+<input id="u63" style="position:absolute; left:-3px; top:0px;" type="checkbox" value="checkbox"   >
 </DIV>
 <div id="u66" class="u66"  >
 <div id="u66_rtf">
@@ -218,51 +225,44 @@
 <DIV id="u69_line" class="u69_line" ></DIV>
 </div>
 <div id="u70" class="u70_container"   >
-<div id="u70_img" class="u70_normal detectCanvas"></div>
+<a href="#" id="u70_img" class="u70_normal detectCanvas"></a>
 <div id="u71" class="u71" style="visibility:hidden;"  >
 <div id="u71_rtf"></div>
 </div>
 </div>
 <div id="u72" class="u72_container"   >
-<div id="u72_img" class="u72_normal detectCanvas"></div>
-<div id="u73" class="u73" style="visibility:hidden;"  >
+<a id="u72_img" class="u72_normal detectCanvas"></a>
+<div href="#" id="u73" class="u73" style="visibility:hidden;"  >
 <div id="u73_rtf"></div>
 </div>
 </div><div id="u74" class="u74" >
 <DIV id="u74_line" class="u74_line" ></DIV>
 </div>
 <div id="u75" class="u75_container"   >
-<div id="u75_img" class="u75_normal detectCanvas"></div>
+<a href="#" id="u75_img" class="u75_normal detectCanvas"></a>
 <div id="u76" class="u76" style="visibility:hidden;"  >
 <div id="u76_rtf"></div>
 </div>
 </div>
 <div id="u77" class="u77_container"   >
-<div id="u77_img" class="u77_normal detectCanvas"></div>
+<a href="#" id="u77_img" class="u77_normal detectCanvas"></a>
 <div id="u78" class="u78" style="visibility:hidden;"  >
 <div id="u78_rtf"></div>
 </div>
 </div>
-<div id="u79" class="u79"  >
-<div id="u79_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:22px;font-weight:normal;font-style:normal;text-decoration:none;color:#FF0066;">公</span><span style="font-family:Applied Font;font-size:22px;font-weight:normal;font-style:normal;text-decoration:none;color:#FF0066;">&nbsp;</span><span style="font-family:Applied Font;font-size:22px;font-weight:normal;font-style:normal;text-decoration:none;color:#FF0066;">益</span></p></div>
+
+<div class="team-sort">
+<ul class="team-items">
+<li class="team-title">公益</li>
+<li><a href="#">关爱老人</a></li>
+<li><a href="#">公益</a></li>
+<li><a href="#">暴走</a></li>
+<li><a href="#">无偿献血</a></li>
+<li><a href="#">义务劳动</a></li>
+<li><a href="#">查看更多</a></li>
+</ul>
 </div>
-<div id="u80" class="u80"  >
-<div id="u80_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">关爱老人</span></p></div>
-</div>
-<div id="u81" class="u81"  >
-<div id="u81_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">公益</span><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">暴走</span></p></div>
-</div>
-<div id="u82" class="u82"  >
-<div id="u82_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">无</span><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">偿献血</span></p></div>
-</div>
-<div id="u83" class="u83"  >
-<div id="u83_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">义务劳动</span></p></div>
-</div>
-<div id="u84" class="u84"  >
-<div id="u84_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">查看更多…</span></p></div>
-</div><div id="u85" class="u85" >
-<DIV id="u85_line" class="u85_line" ></DIV>
-</div>
+
 <div id="u86" class="u86_container"   >
 <div id="u86_img" class="u86_normal detectCanvas"></div>
 <div id="u87" class="u87" style="visibility:hidden;"  >
@@ -453,21 +453,19 @@
 </div><div id="u150" class="u150" >
 <DIV id="u150_line" class="u150_line" ></DIV>
 </div>
-<div id="u151" class="u151"  >
-<div id="u151_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:22px;font-weight:normal;font-style:normal;text-decoration:none;color:#FF0066;">穷游</span></p></div>
+
+
+<div class="team-sort1">
+    <ul class="team-items">
+    <li class="team-title">穷游</li>
+    <li><a href="#">走进丽江</a></li>
+    <li><a href="#">川藏骑行</a></li>
+    <li><a href="#">背包客</a></li>
+    <li><a href="#">裸辞</a></li>
+    <li><a href="#">查看更多</a></li>
+    </ul>
 </div>
-<div id="u152" class="u152"  >
-<div id="u152_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">走进丽江</span></p></div>
-</div>
-<div id="u153" class="u153"  >
-<div id="u153_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">川藏骑行</span></p></div>
-</div>
-<div id="u154" class="u154"  >
-<div id="u154_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">背包客</span></p></div>
-</div>
-<div id="u155" class="u155"  >
-<div id="u155_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">裸</span><span style="font-family:Applied Font;font-size:15px;font-weight:normal;font-style:normal;text-decoration:none;color:#33CCFF;">辞</span></p></div>
-</div>
+
 <div id="u156" class="u156_container"   >
 <div id="u156_img" class="u156_normal detectCanvas"></div>
 <div id="u157" class="u157" style="visibility:hidden;"  >
@@ -1157,6 +1155,31 @@
 </div>
 </DIV>
 </DIV>
+<DIV id="u387" style="visibility:hidden;" data-label="搜索">
+<DIV id="pd0u387" style="" data-label="搜索">
+<div id="u388" class="u388_container"   >
+<div id="u388_img" class="u388_normal detectCanvas"></div>
+<div id="u389" class="u389" style="visibility:hidden;"  >
+<div id="u389_rtf"></div>
+</div>
+</div>
+<div id="u390" class="u390_container"   >
+<div id="u390_img" class="u390_normal detectCanvas"></div>
+<div id="u391" class="u391" style="visibility:hidden;"  >
+<div id="u391_rtf"></div>
+</div>
+</div>
+<div id="u392" class="u392"  >
+<div id="u392_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">搜“team”相关团队</span></p></div>
+</div>
+<div id="u393" class="u393"  >
+<div id="u393_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">搜“team”相关</span><span style="font-family:Applied Font;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">任务</span></p></div>
+</div>
+<div id="u394" class="u394"  >
+<div id="u394_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">搜“team”相关</span><span style="font-family:Applied Font;font-size:14px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">用户</span></p></div>
+</div>
+</DIV>
+</DIV>
 <div id="u395" class="u395"  >
 <div id="u395_rtf"><p style="text-align:left;"><span style="font-family:Applied Font;font-size:18px;font-weight:bold;font-style:normal;text-decoration:none;color:#333333;">团队TOP10</span></p></div>
 </div><div id="u396" class="u396" >
@@ -1165,14 +1188,5 @@
 </div>
 <div class="preload"><img src="Home_files/u0_normal.png" width="1" height="1"/><img src="Home_files/u2_line.png" width="1" height="1"/><img src="Home_files/u4_normal.png" width="1" height="1"/><img src="Home_files/u6_normal.png" width="1" height="1"/><img src="Home_files/u8_normal.png" width="1" height="1"/><img src="Home_files/u11_normal.png" width="1" height="1"/><img src="Home_files/u14_line.png" width="1" height="1"/><img src="Home_files/u16_normal.png" width="1" height="1"/><img src="Home_files/u20_line.png" width="1" height="1"/><img src="Home_files/u24_line.png" width="1" height="1"/><img src="Home_files/u26_line.png" width="1" height="1"/><img src="Home_files/u27_normal.png" width="1" height="1"/><img src="Home_files/u30_normal.png" width="1" height="1"/><img src="Home_files/u43_line.png" width="1" height="1"/><img src="Home_files/u46_line.png" width="1" height="1"/><img src="Home_files/u49_normal.png" width="1" height="1"/><img src="Home_files/u51_normal.png" width="1" height="1"/><img src="Home_files/u54_normal.png" width="1" height="1"/><img src="Home_files/u57_normal.png" width="1" height="1"/><img src="Home_files/u61_normal.png" width="1" height="1"/><img src="Home_files/u65_line.png" width="1" height="1"/><img src="Home_files/u68_line.png" width="1" height="1"/><img src="Home_files/u69_line.png" width="1" height="1"/><img src="Home_files/u70_normal.png" width="1" height="1"/><img src="Home_files/u72_normal.png" width="1" height="1"/><img src="Home_files/u74_line.png" width="1" height="1"/><img src="Home_files/u75_normal.png" width="1" height="1"/><img src="Home_files/u77_normal.png" width="1" height="1"/><img src="Home_files/u85_line.png" width="1" height="1"/><img src="Home_files/u88_line.png" width="1" height="1"/><img src="Home_files/u92_line.png" width="1" height="1"/><img src="Home_files/u93_normal.png" width="1" height="1"/><img src="Home_files/u95_normal.png" width="1" height="1"/><img src="Home_files/u98_normal.png" width="1" height="1"/><img src="Home_files/u106_normal.png" width="1" height="1"/><img src="Home_files/u130_line.png" width="1" height="1"/><img src="Home_files/u134_line.png" width="1" height="1"/><img src="Home_files/u146_line.png" width="1" height="1"/><img src="Home_files/u150_line.png" width="1" height="1"/><img src="Home_files/u158_line.png" width="1" height="1"/><img src="Home_files/u162_line.png" width="1" height="1"/><img src="Home_files/u195_line.png" width="1" height="1"/><img src="Home_files/u207_line.png" width="1" height="1"/><img src="Home_files/u216_line.png" width="1" height="1"/><img src="Home_files/u219_line.png" width="1" height="1"/><img src="Home_files/u223_line.png" width="1" height="1"/><img src="Home_files/u229_line.png" width="1" height="1"/><img src="Home_files/u233_line.png" width="1" height="1"/><img src="Home_files/u266_line.png" width="1" height="1"/><img src="Home_files/u278_normal.png" width="1" height="1"/><img src="Home_files/u280_normal.png" width="1" height="1"/><img src="Home_files/u282_normal.png" width="1" height="1"/><img src="Home_files/u286_normal.png" width="1" height="1"/><img src="Home_files/u292_normal.png" width="1" height="1"/><img src="Home_files/u301_line.png" width="1" height="1"/><img src="Home_files/u302_line.png" width="1" height="1"/><img src="Home_files/u303_line.png" width="1" height="1"/><img src="Home_files/u311_normal.png" width="1" height="1"/><img src="Home_files/u313_normal.png" width="1" height="1"/><img src="Home_files/u318_normal.png" width="1" height="1"/><img src="Home_files/u325_normal.png" width="1" height="1"/><img src="Home_files/u327_normal.png" width="1" height="1"/><img src="Home_files/u342_normal.png" width="1" height="1"/><img src="Home_files/u348_normal.png" width="1" height="1"/><img src="Home_files/u356_normal.png" width="1" height="1"/><img src="Home_files/u364_normal.png" width="1" height="1"/><img src="Home_files/u373_normal.png" width="1" height="1"/><img src="Home_files/u380_normal.png" width="1" height="1"/><img src="Home_files/u384_normal.png" width="1" height="1"/><img src="Home_files/u388_normal.png" width="1" height="1"/><img src="Home_files/u390_normal.png" width="1" height="1"/><img src="Home_files/u396_line.png" width="1" height="1"/></div>
 </body>
-<script type="text/javascript" src="../sea-modules/seajs/1.3.0-dev/sea.js" id="seajsnode"></script>
-<script type="text/javascript">
-    seajs.config({
-        alias:{
-            jquery:'1.8.2'
-        },
-        base:'../sea-modules/'
-    });
-    seajs.use('shuihuar/src/index.js')
-</script>
-</html>
+<script src="resources/scripts/axurerp_pagescript.js"></script>
+<script src="Home_files/axurerp_pagespecificscript.js" charset="utf-8"></script>
