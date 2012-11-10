@@ -1,7 +1,10 @@
 define(function (require, exports, module) {
-    var $ = require('jquery')
+    var $ = require('jquery'),
+        modal = require('./modal')
 
     var Join = function (btn, id) {
+        new modal('<p>申请已经提交</p>','申请加入').open();
+        return;
         $(btn).click(function () {
             $.ajax({
                 url:'',

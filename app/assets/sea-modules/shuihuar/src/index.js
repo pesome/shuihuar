@@ -11,6 +11,12 @@ define(function (require, exports, module) {
     var Search = require('./search').Search;
     new Search($("#J_search"), $('#J_search_list'));
 
+    //join
+    var Join = require('./join')
+    $('.join-team').click(function(){
+        new Join(this);
+    })
+
     return;
     //init login
     var Login = require('./log');
