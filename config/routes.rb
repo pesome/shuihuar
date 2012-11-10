@@ -2,27 +2,27 @@ Blog::Application.routes.draw do
   get "user/back_information"
 
   get "home/index"
-
-  resources :users
-
   get "user/index"
-
   get "user/login"
-
   get "user/logout"
   
   resources :users do
     resources :groups
+    resources :tasks
     resources :user_reviews
     resources :follow_users
   end
   
-  resources :groups
-  resources :categories
+  resources :groups do
+    resources :users
+    resources :categories
+    resources :tasks do
+      resources :task_reviews
+    end
+    resources :group_reviews
+    resources :follow_groups
+  end
 
-  get "home/index"
- 
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
