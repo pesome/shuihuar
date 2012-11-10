@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Name:</b>
+  <%= @task.name %>
+</p>
+<p>
+  <b>Desctiption:</b>
+  <%= @task.description %>
+</p>
+<p>
+   <td><%= link_to 'Edit', edit_task_path(@task) %></td>
+</p>
+
+
+<h2>所有评论:</h2>
+<table>
+<% @task.task_reviews.each do |task_review| %>
+<tr>
+    <td><%= task_review.id %></td>
+    <td><%= task_review.context %></td>
+</tr>   
+<% end %> 
+</table>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
