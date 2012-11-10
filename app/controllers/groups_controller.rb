@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+    before_filter :authenticate_user!
   # GET /groups
   # GET /groups.json
   def index
@@ -15,7 +16,6 @@ class GroupsController < ApplicationController
   def show
     #Group.joins(:user,:task)
     @group = Group.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @group }
@@ -41,7 +41,7 @@ class GroupsController < ApplicationController
   # POST /groups
   # POST /groups.json
   def create
-    @group = Group.new(params[:group])
+    @group = Group.new(params[:group].merge(:owner=>current_user.id))
 
     respond_to do |format|
       if @group.save

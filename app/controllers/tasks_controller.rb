@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_filter :authenticate_user!
   # GET /tasks
   # GET /tasks.json
   def index
@@ -41,7 +42,8 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(params[:task])
+
+    @task = Task.new(params[:task].merge(:owner=>current_user).merge(:group_id=>Group.find('1')))
 
     respond_to do |format|
       if @task.save
