@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  task_id: 1
+  context: MyText
+  add_time: 2012-11-10 15:33:07
+
+two:
+  task_id: 1
+  context: MyText
+  add_time: 2012-11-10 15:33:07
