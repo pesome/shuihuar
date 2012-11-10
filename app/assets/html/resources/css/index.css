@@ -187,3 +187,43 @@ ul, li {list-style: none;}
 .search-list .key{
     color: red;
 }
+
+/*首页slide*/
+.slide{
+    width:720px;
+    height: 350px;
+    position:absolute;
+    left:11px;
+    top:66px;
+    overflow: hidden;
+}
+
+.slide .slide-list, .slide .slide-trigger{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slide .slide-list{
+    width: 2160px;
+    position: absolute;
+}
+.slide .slide-list .slide-item{
+    padding: 0;
+    float: left;
+}
+
+
+.slide .slide-trigger{
+    position: absolute;
+    right: 20px;
+    top :20px;
+}
+
+.slide-trigger .slide-trigger-item{
+    border: #ffffff solid 2px;
+    border-radius: 4px;
+    margin: 20px;
+}
+.slide-trigger .slide-trigger-item.current{
+    border: rgba(1, 186, 227, 1) solid 2px;
+}
