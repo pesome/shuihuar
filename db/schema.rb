@@ -11,40 +11,108 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024074127) do
+ActiveRecord::Schema.define(:version => 20121110080033) do
 
-  create_table "comments", :force => true do |t|
-    t.string   "commenter"
-    t.string   "body"
-    t.integer  "post_id"
+  create_table "apply_groups", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.integer  "owner_id"
+    t.integer  "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "comments", ["post_id"], :name => "index_comments_on_post_id"
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.text     "descripion"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "follow_groups", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "follow_users", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "followed_user_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "group_categories", :force => true do |t|
+    t.integer "group_id"
+    t.integer "category_id"
+  end
+
+  add_index "group_categories", ["category_id", "group_id"], :name => "index_group_categories_on_category_id_and_group_id"
+  add_index "group_categories", ["group_id", "category_id"], :name => "index_group_categories_on_group_id_and_category_id"
+
+  create_table "group_reviews", :force => true do |t|
+    t.integer  "group_id_id"
+    t.text     "context"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "groups", :force => true do |t|
-    t.string   "title"
-    t.integer  "max_person"
-    t.string   "description"
+    t.string   "name"
+    t.text     "description"
+    t.string   "label"
+    t.string   "image_url"
+    t.integer  "owner"
+    t.boolean  "is_public"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "people", :force => true do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "posts", :force => true do |t|
-    t.string   "name"
-    t.string   "title"
-    t.text     "content"
+  create_table "task_reviews", :force => true do |t|
+    t.integer  "task_id_id"
+    t.text     "context"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "name"
+    t.datetime "expect_begin_time"
+    t.datetime "expect_end_time"
+    t.datetime "begin_time"
+    t.datetime "end_time"
+    t.integer  "owner"
+    t.text     "description"
+    t.integer  "status"
+    t.integer  "assign_user"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "user_reviews", :force => true do |t|
+    t.integer  "user_id_id"
+    t.text     "context"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "QQ"
+    t.string   "weibo"
+    t.string   "phone"
+    t.integer  "gender"
+    t.string   "company"
+    t.string   "label"
+    t.string   "city"
+    t.string   "destrict"
+    t.string   "icon_url"
+    t.string   "position"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
