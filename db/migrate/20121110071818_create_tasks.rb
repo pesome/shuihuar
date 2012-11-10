@@ -1,6 +1,7 @@
 class CreateTasks < ActiveRecord::Migration
   def change
     create_table :tasks do |t|
+      t.integer :group_id
       t.string :name
       t.datetime :expect_begin_time
       t.datetime :expect_end_time
@@ -10,7 +11,7 @@ class CreateTasks < ActiveRecord::Migration
       t.text :description
       t.integer :status
       t.integer :assign_user
-
+      
       t.timestamps
     end
   end
