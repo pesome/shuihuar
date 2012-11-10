@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121110080033) do
+ActiveRecord::Schema.define(:version => 20121110082836) do
 
   create_table "apply_groups", :force => true do |t|
     t.integer  "user_id"
@@ -90,6 +90,14 @@ ActiveRecord::Schema.define(:version => 20121110080033) do
     t.datetime "updated_at",        :null => false
   end
 
+  create_table "user_groups", :force => true do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+  end
+
+  add_index "user_groups", ["group_id", "user_id"], :name => "index_user_groups_on_group_id_and_user_id"
+  add_index "user_groups", ["user_id", "group_id"], :name => "index_user_groups_on_user_id_and_group_id"
+
   create_table "user_reviews", :force => true do |t|
     t.integer  "user_id_id"
     t.text     "context"
@@ -111,8 +119,9 @@ ActiveRecord::Schema.define(:version => 20121110080033) do
     t.string   "icon_url"
     t.string   "position"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
+    t.string   "encrypted_password", :limit => 128, :default => "", :null => false
   end
 
 end
