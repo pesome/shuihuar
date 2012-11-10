@@ -3,6 +3,7 @@ Blog::Application.routes.draw do
 
   resources :users
 
+  get "home/index"
   get "user/index"
 
   get "user/login"

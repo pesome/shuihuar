@@ -1,3 +1,3 @@
 class TaskReview < ActiveRecord::Base
-  belongs_to :tasks
+  belongs_to :task
 end
