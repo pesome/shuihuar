@@ -9,6 +9,15 @@
 <body style="background: #EEEEEE;">
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+<div id="user_nav">
+  <% if user_signed_in? %>
+      已登录为 <%= current_user.email %>. 不是你?
+      <%= link_to "登出", destroy_user_session_path %>
+  <% else %>
+      <%= link_to "注册", new_user_registration_path %> 或者
+      <%= link_to "登录", new_user_session_path %>
+  <% end %>
+</div>
 <%= yield %>
 
 </body>
