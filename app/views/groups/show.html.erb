@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Name:</b>
+  <%= @group.name %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @group.description %>
+</p>
+<p>
+  <b>Label:</b>
+  <%= @group.label %>
+</p>
+<p>
+  <b>Is_public:</b>
+  <%= @group.is_public %>
+</p>
+
+<h2>Users:</h2>
+<table>
+<tr>
+    <th>name</th>
+    <th>position</th>
+    <th>icon_url</th>
+</tr>
+<% @group.users.each do |user| %>
+<tr>
+    <td><%= user.name %></td>
+    <td><%= user.position %></td>
+    <td><%= user.icon_url %></td>
+</tr>   
+<% end %> 
+</table>
+
+<h2>Reviews:</h2>
+<table>
+<tr>
+    <th>id</th>
+    <th>context</th>
+</tr>
+<% @group.group_reviews.each do |group_review| %>
+<tr>
+    <td><%= group_review.id %></td>
+    <td><%= group_review.context %></td>
+</tr>   
+<% end %> 
+</table>
+
+<h2>Tasks:</h2>
+<table>
+<tr>
+    <th>id</th>
+    <th>name</th>
+</tr>
+<% @group.tasks.each do |task| %>
+<tr>
+    <td><%= task.id %></td>
+    <td><%= task.name %></td>
+</tr>   
+<% end %> 
+</table>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
