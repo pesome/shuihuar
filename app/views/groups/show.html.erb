@@ -42,7 +42,7 @@
                     <a href="#" class="edit"><i></i>修改</a>
                 </div>
                 <div class="textarea-block">
-                    <textarea cols="70" rows="12"></textarea>
+                    <textarea cols="70" rows="12"><%=@group.description %></textarea>
                     <ul class="job">
                         <li><a href="#">共<%=@group.tasks.size %>个任务</a></li>
                         <li><a href="#">评论</a></li>
@@ -95,14 +95,11 @@
                 </div>
 
                 <div class="team-self">
-                    <h4>相关团队</h4>
+                    <h4>评论:</h4>
                     <ul>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
+                    	<% @group.group_reviews.each do |group_review| %>
+						    <li><%= group_review.id %>· <%= group_review.context %></li>
+						<% end %> 
                     </ul>
                 </div>
             <div>
