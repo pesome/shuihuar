@@ -1,5 +1,28 @@
-<!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+<head>
+    <title>Home</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="/assets/reset.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/user.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<%=yield%>
+</body>
+<%= javascript_include_tag "application" %>
+<script type="text/javascript">
+    seajs.config({
+        alias:{
+            jquery:'1.8.2'
+        },
+        base:'../sea-modules/'
+    })
+    seajs.use('shuihuar/src/index')
+</script>
+=======
 <!--<head>
   <title>水花</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -18,4 +41,5 @@
 </div> -->
 <%= yield %>
 
+>>>>>>> d7e6829a8d6c7ddcd29dccb6277b5839408b7412
 </html>

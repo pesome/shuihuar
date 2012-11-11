@@ -1,4 +1,8 @@
 Blog::Application.routes.draw do
+ 
+  get "user/basic_information"
+  get "home/index"
+
   devise_for :users
   #devise_for :users, :controllers => {:sessions => 'sessions', :registrations => :registrations}
   resources :users do

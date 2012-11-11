@@ -1,0 +1,74 @@
+<div class="base-info" >
+    <h3>基本信息</h3><a class="edit-info" href="#"><i></i>&nbsp;编辑</a>
+    <a href="#" class="find-info"><i></i>&nbsp;找同类</a>
+    <table style="clear:both;" class="base-table">
+        <tbody>
+            <tr>
+                <td class="t-left">昵称：</td>
+                <td><%= @user.name%></td>
+            </tr>
+            <tr>
+                <td class="t-left">真实姓名：</td>
+                <td><%= @user.name%></td>
+            </tr>
+            <tr>
+                <td class="t-left">性别：</td>
+                <%if  @user.gender ==1%>
+                <td>男</td>
+                <%elsif%>
+                <td>女</td>
+                <%end%>
+            </tr>
+            <tr>
+                <td class="t-left">所在地：</td>
+                <td><%=@user.city%><%=@user.destrict%></td>
+            </tr>
+            <tr>
+                <td class="t-left">个人标签：</td>
+                <td><%=@user.label%></td>
+            </tr>
+            <tr>
+                <td class="t-left">个人简介：</td>
+                <td><%=@user.description%></td>
+            </tr>
+            </body>
+    </table>
+
+    <h3>联系信息</h3><a class="edit-info" href="#"><i></i>&nbsp;编辑</a>
+
+    <table style="clear:both;" class="base-table">
+        <tbody>
+            <tr>
+                <td class="t-left">QQ：</td>
+                <td><%=@user.QQ%></td>
+            </tr>
+            <tr>
+                <td class="t-left">新浪微博：</td>
+                <td><%=@user.weibo%></td>
+            </tr>
+            <tr>
+                <td class="t-left">邮箱：</td>
+                <td><%=@user.email%></td>
+            </tr>
+            <tr>
+                <td class="t-left">电话号码：</td>
+                <td><%=@user.phone%></td>
+            </tr>
+            </body>
+    </table>
+    <h3>职业信息</h3><a class="edit-info" href="#"><i></i>&nbsp;编辑</a>
+    <a href="#" class="find-info"><i></i>&nbsp;找同事</a>
+    <table style="clear:both;" class="base-table">
+        <tbody>
+            <tr>
+                <td class="t-left">公司：</td>
+                <td><%=@user.company%></td>
+            </tr>
+            <tr>
+                <td class="t-left">职位：</td>
+                <td><%=@user.position%></td>
+            </tr>
+            </body>
+    </table>
+
+</div>

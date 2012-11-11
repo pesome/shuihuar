@@ -8,8 +8,6 @@ body {
 	left:50%;
 	margin-left:-480px;
 }
-
-
 .button, .btns {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #e0e0e0) );
 	color:#555;
@@ -32,8 +30,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
 	text-decoration:none;
 }
-
-.header {height: 44px;zoom:1;border-bottom:1px solid #CCC;}
+.header {height: 44px;overflow:auto; zoom:1;border-bottom:1px solid #CCC;}
 .header .logo {float: left;width:224px; }
 .logo .logo-word {
 	padding:0px 15px;
@@ -118,7 +115,7 @@ body {
 }
 .search-list-wrap .search-submit{
     position: absolute;
-    background: url('../../../images/searchbtn.png');
+    background: url('../../Home_files/u49_normal.png');
     width:30px;
     height: 22px;
     border: none;
@@ -180,6 +177,12 @@ body {
 }
 .ope-list i.edit {
 	background-position: -68px -115px;
+}
+.ope-list i.invite {
+	background-position: -3px -115px;
+}
+.ope-list i.topic {
+	background-position: -132px -100px;
 }
 .ope-list i.create {
 	background-position: -116px -115px;
@@ -305,29 +308,145 @@ body {
 	border: 1px solid #CCC;
 }
 .team-self { margin-top: 30px;}
-.team-role img{display: block;float: left;margin-right:4px;}
-.team-role li, .team-self li {line-height: 40px;margin-bottom:2px;height: 40px;padding:2px 0px;vertical-align: middle;font-size: 14px;color: #666;}
+.team-role img{display: block;float: left;margin-right:10px;}
+.team-role li, .team-self li {line-height: 40px;margin-bottom:2px;height: 40px;padding:2px 10px;vertical-align: middle;font-size: 14px;color: #666;}
 .team-self li {line-height: 30px;height: 30px;padding-left:20px;}
 .team-self i { width:10px;height: 10px;display: block;float: left;margin-top:10px;margin-left:0px;
 	background: url(images/icon.png) -38px -20px no-repeat;
 }
 .team-self a {margin-left: 5px;}
-.team-role a, .team-self a {display: block;float: left;font-size: 12px;color:#666;text-decoration: none;}
+.team-role a, .team-self a {display: block;float: left;font-size: 14px;color:#666;text-decoration: none;}
 .team-role a:hover, .team-self a:hover {text-decoration: none;color:#08c;}
 .team-role h4, .team-self h4 {line-height: 30px;margin-bottom:10px;background-color: #EFEFEF;color:#666;padding-left:10px;}
 
-/* ------------------------------------- */
-.team-sort {height: 40px;line-height: 40px;border-bottom: 1px solid #CCC;}
-.team-sort .team-name {background-color: #f07438;float: left;padding:0 10px;color:#FFF;}
-.sort-list {float: left;}
-.sort-list li { float:left; margin-left: 20px; }
-.sort-list a {color:#3CF;text-decoration: none;}
-.sort-list a:hover {text-decoration: none;color: #08c;}
-.state-list {overflow: auto;margin-top: 10px;margin-bottom: 10px;}
+
+/* ----------------------------------- */
+.user-info {
+	height: 116px;
+	width: 648px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	position: relative;
+	opacity: 0.8;
+	padding:10px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
+}
+.more-info {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #09F;
+}
+.more-info:hover {
+	text-decoration: none;
+	color: #08c;
+}
+.user-info .user-image {
+	float: left;
+	margin-right:20px;
+	padding-left:0;
+}
+.user-info h4 {
+	line-height: 30px;
+	font-size: 20px;
+}
+.user-info p {
+	font-size: 14px;
+	color: #444;
+	line-height: 24px;
+	font-family:"microsoft YaHei";
+}
+.user-details {
+	margin-top:20px;
+}
+.tabs {overflow: auto;}
+.tabs li {float: left;height: 36px;line-height: 36px;
+}
+
+.tabs a {font-size: 14px;text-decoration: none;
+	padding: 0 10px;
+	display: block;
+	margin-right:1px;
+	background-color: #0088d9;
+	color: #FFF;
+}
+.tabs a.current {
+	background-color: #00b0f1;
+	color: #FFF;
+}
+.base-info {
+	margin-top:20px;
+	padding:10px;
+}
+.edit-info, .find-info {
+	display: block;
+	float: left;
+	line-height: 30px;
+	padding:0 20px;
+	font-size: 14px;
+	color:#666;
+	text-decoration: none;
+}
+.edit-info i, .find-info i {
+	display: block;
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin-top: 10px;
+	background-image: url(images/icon.png);
+	background-repeat: no-repeat;
+	background-position: -68px -115px;
+}
+.find-info i {
+	background-position: -132px -18px;
+}
+.edit-info:hover, .find-info:hover {
+	text-decoration: none;
+	color: #08c;
+}
+.t-left {
+	text-align: right;
+}
+.base-table {
+	padding:30px;
+	border-top: 1px solid #CCC;
+}
+.base-table tr {
+	line-height: 30px;
+}
+.focus h4 {
+	line-height: 40px;
+	padding-left: 20px;
+	margin-bottom:20px;
+	border-bottom: 1px solid #CCC;
+}
+.focus-item li {
+	float: left;
+	width:210px;
+	height:86px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	margin-right:11px;
+	margin-bottom: 12px;
+}
+.focus-item a {
+	display: block;
+	float: left;
+	width: 70px;
+	height: 70px;
+	margin-top:8px;
+	margin-left: 8px;
+}
+.focus-item img {width: 70px;height: 70px;}
+.focus-item span {display: block;float: left;line-height: 30px;margin-top: 30px;margin-left:10px;}
+
+.state-list {overflow: auto;margin-left:150px;margin-bottom: 10px;}
 .state-list li {float: left;line-height: 40px;height: 40px;margin-right: 30px;}
 .state-list a {
 	text-align: center;
-	background-color: #08c;
+	background-color: #999;
 	font-size: 14px;
 	color: #FFF;
 	display: block;
@@ -338,42 +457,16 @@ body {
 	text-decoration: none;
 	color: #EFEFEF;
 }
-.team-items {margin-top:20px;}
-.team-items .ls {height: 40px; line-height: 40px;border-top:1px solid #CCC;position: relative;}
-.team-lists label {float: left;display: block;font-size: 14px;color: #3CF;margin-right:30px;}
-.tags-list {float: left;margin-top:5px;}
-.tags-list li {float: left;border-top:0 none;padding:0 10px;height: 30px;
-	line-height: 30px;background-color:#c4ebfd;margin-right:10px;
-	color: #0199d4;
-	border-radius: 4px;
+.team-sort {height: 40px;line-height: 40px;margin-top:20px;border-bottom:1px solid #CCC;box-shadow:-2px 2px 5px rgba(0, 0, 0, 0.1); }
+.team-sort .team-name {background-color: #f07438;float: left;padding:0 10px;color:#FFF;}
+.job-table {margin-top: 20px;}
+.job-table tr {
+	line-height: 40px;
+	background-color: #FFF;
 }
-.ope-lists {position: absolute;right:20px;top:0;}
-.ope-lists a {font-size: 14px;}
-.tags-list li.current {
-	background-color: #EEE;
-	color: #6CF;
+.job-table td {
+	width:50%;
+	padding:0 30px;
+	border-top: 1px solid #CCC;
 }
-.user-btn-up i,.user-btn-down i, .join-btn i {
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	background: url(images/icon.png) -18px -131px no-repeat;
-	margin-right:5px;
-}
-.user-btn-down i {
-	background: url(images/icon.png) -67px -131px no-repeat;
-}
-.join-btn {margin-right:8px;}
-.join-btn i {
-	background: url(images/icon.png) -18px -116px no-repeat;
-}
-.team-details {padding:10px 20px;
-	font-family:"microsoft YaHei";
-	font-size: 14px;
-	color: #666;
-	line-height: 22px;
-}
-.team-role a.care-btn {padding:6px;display: inline;float: none;}
-
-
 
