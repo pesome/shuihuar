@@ -43,9 +43,9 @@
                 </div>
                 <div class="tag">
                     <ul class="tag-list">
-                    		<% @group.categories.each do |category| %>
-    							<li><%= category.name %></li>
-							<% end %> 
+                    	<% @group.label.split(",").each do |label| %>
+							<li><%= label %></li>
+						<% end %>
                     </ul>
                     <a href="#" class="edit"><i></i>修改</a>
                 </div>

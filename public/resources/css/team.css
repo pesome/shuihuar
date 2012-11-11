@@ -8,32 +8,7 @@ body {
 	left:50%;
 	margin-left:-480px;
 }
-
-
-.button, .btns {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #e0e0e0) );
-	color:#555;
-	font-size:12px;
-	padding:6px 10px 6px 10px;
-	cursor:pointer;
-  text-decoration:none;
-  background-color: #E0E0E0;
-  background-image: linear-gradient(to bottom, #FAFAFA 0px, #DCDCDC 100%);
-  border-width: 1px;
-  border-style: solid;
-  font-weight: bolder;
-  border-color: #CCCCCC #CCCCCC #AAAAAA;
-  box-shadow: 0 0 1px #FFFFFF inset;
-  text-shadow: 1px 1px 1px #FFFFFF;
-}
-.btns, .button:hover {
-  background-image: linear-gradient(to bottom, #F0F0F0 0px, #E6E6E6 100%);
-  border-color: #AAAAAA #AAAAAA #999999;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
-	text-decoration:none;
-}
-
-.header {height: 44px;zoom:1;border-bottom:1px solid #CCC;}
+.header {height: 44px;overflow:auto; zoom:1;border-bottom:1px solid #CCC;}
 .header .logo {float: left;width:224px; }
 .logo .logo-word {
 	padding:0px 15px;
@@ -118,7 +93,7 @@ body {
 }
 .search-list-wrap .search-submit{
     position: absolute;
-    background: url('../../../images/searchbtn.png');
+    background: url('../../Home_files/u49_normal.png');
     width:30px;
     height: 22px;
     border: none;
@@ -305,75 +280,15 @@ body {
 	border: 1px solid #CCC;
 }
 .team-self { margin-top: 30px;}
-.team-role img{display: block;float: left;margin-right:4px;}
-.team-role li, .team-self li {line-height: 40px;margin-bottom:2px;height: 40px;padding:2px 0px;vertical-align: middle;font-size: 14px;color: #666;}
+.team-role img{display: block;float: left;margin-right:10px;}
+.team-role li, .team-self li {line-height: 40px;margin-bottom:2px;height: 40px;padding:2px 10px;vertical-align: middle;font-size: 14px;color: #666;}
 .team-self li {line-height: 30px;height: 30px;padding-left:20px;}
 .team-self i { width:10px;height: 10px;display: block;float: left;margin-top:10px;margin-left:0px;
 	background: url(images/icon.png) -38px -20px no-repeat;
 }
 .team-self a {margin-left: 5px;}
-.team-role a, .team-self a {display: block;float: left;font-size: 12px;color:#666;text-decoration: none;}
+.team-role a, .team-self a {display: block;float: left;font-size: 14px;color:#666;text-decoration: none;}
 .team-role a:hover, .team-self a:hover {text-decoration: none;color:#08c;}
 .team-role h4, .team-self h4 {line-height: 30px;margin-bottom:10px;background-color: #EFEFEF;color:#666;padding-left:10px;}
-
-/* ------------------------------------- */
-.team-sort {height: 40px;line-height: 40px;border-bottom: 1px solid #CCC;}
-.team-sort .team-name {background-color: #f07438;float: left;padding:0 10px;color:#FFF;}
-.sort-list {float: left;}
-.sort-list li { float:left; margin-left: 20px; }
-.sort-list a {color:#3CF;text-decoration: none;}
-.sort-list a:hover {text-decoration: none;color: #08c;}
-.state-list {overflow: auto;margin-top: 10px;margin-bottom: 10px;}
-.state-list li {float: left;line-height: 40px;height: 40px;margin-right: 30px;}
-.state-list a {
-	text-align: center;
-	background-color: #08c;
-	font-size: 14px;
-	color: #FFF;
-	display: block;
-	padding: 0 12px;
-	text-decoration: none;
-}
-.state-list a:hover {
-	text-decoration: none;
-	color: #EFEFEF;
-}
-.team-items {margin-top:20px;}
-.team-items .ls {height: 40px; line-height: 40px;border-top:1px solid #CCC;position: relative;}
-.team-lists label {float: left;display: block;font-size: 14px;color: #3CF;margin-right:30px;}
-.tags-list {float: left;margin-top:5px;}
-.tags-list li {float: left;border-top:0 none;padding:0 10px;height: 30px;
-	line-height: 30px;background-color:#c4ebfd;margin-right:10px;
-	color: #0199d4;
-	border-radius: 4px;
-}
-.ope-lists {position: absolute;right:20px;top:0;}
-.ope-lists a {font-size: 14px;}
-.tags-list li.current {
-	background-color: #EEE;
-	color: #6CF;
-}
-.user-btn-up i,.user-btn-down i, .join-btn i {
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	background: url(images/icon.png) -18px -131px no-repeat;
-	margin-right:5px;
-}
-.user-btn-down i {
-	background: url(images/icon.png) -67px -131px no-repeat;
-}
-.join-btn {margin-right:8px;}
-.join-btn i {
-	background: url(images/icon.png) -18px -116px no-repeat;
-}
-.team-details {padding:10px 20px;
-	font-family:"microsoft YaHei";
-	font-size: 14px;
-	color: #666;
-	line-height: 22px;
-}
-.team-role a.care-btn {padding:6px;display: inline;float: none;}
-
 
 
