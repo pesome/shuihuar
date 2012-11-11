@@ -4,7 +4,7 @@
         <% @follow_user.each do |user|%>
                  
         <li>
-            <%= image_tag 'u24_normal.png'%>
+            <%= image_tag (user.icon_url)%>
             &nbsp;&nbsp;
             <span>
                 <%= user.name%>
@@ -18,9 +18,11 @@
     <ul class="focus-item">
         <% @follow_group.each do |group|%>
         <li>
-            <%= image_tag 'u24_normal.png'%><span><%= group.name%></span>
+            <%= image_tag (group.icon_url)%><span><%= group.name%></span>
         </li>
         <%end%>
     </ul>
-
+    <style type="text/css"">
+    
+    </style>
 </div>
