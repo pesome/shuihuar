@@ -33,7 +33,7 @@ body {
 	text-decoration:none;
 }
 
-.header {height: 44px;overflow:auto; zoom:1;border-bottom:1px solid #CCC;}
+.header {height: 44px;zoom:1;border-bottom:1px solid #CCC;}
 .header .logo {float: left;width:224px; }
 .logo .logo-word {
 	padding:0px 15px;
@@ -312,7 +312,7 @@ body {
 	background: url(images/icon.png) -38px -20px no-repeat;
 }
 .team-self a {margin-left: 5px;}
-.team-role a, .team-self a {display: block;float: left;font-size: 14px;color:#666;text-decoration: none;}
+.team-role a, .team-self a {display: block;float: left;font-size: 12px;color:#666;text-decoration: none;}
 .team-role a:hover, .team-self a:hover {text-decoration: none;color:#08c;}
 .team-role h4, .team-self h4 {line-height: 30px;margin-bottom:10px;background-color: #EFEFEF;color:#666;padding-left:10px;}
 
