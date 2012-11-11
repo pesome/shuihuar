@@ -3,8 +3,8 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=8;" />
     <title>Team List</title>
-    <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/user.css">
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/user.css">
 </head>
 <body>
     <div class="main">
@@ -34,7 +34,8 @@
         <div class="cont clearfix">
             <div class="cont-left">
                 <div class="user-info">
-                    <a class="user-image" href="#"><img src="resources/images/user.png" width="116" height="116" /></a>
+                    <%= image_tag (@user.icon_url)%>
+                    <<a class="user-image" href="#"><img src="resources/images/user.png"> width="116" height="116" /></a>
                     <h4><%= @user.name %></h4>
                     <p><span class="sex">
                         <%if @user.gender == 1%>
