@@ -7,7 +7,7 @@
                     <h3><%= @group.name %></h3>
                     <ul class="ope-list">
                         <li><i class="edit"></i><%= link_to '修改', edit_group_path(@group) %></li>
-                        <li><i class="create"></i><a href="#">创建任务</a></li>
+                        <li><i class="create"></i><%= link_to '创建任务', new_group_path %></li>
                         <li><i class="join"></i><a href="#">加入</a></li>
                     </ul>
                 </div>
@@ -59,7 +59,7 @@
                     <h4>相关个人</h4>
                     <ul>
                     	<% @group.users.each do |user| %>
-						<li><img src="<%=user.icon_url %>" width="36" height="36"/><a href="#"><%= user.name %>(<%= user.position %>)</a></li>
+						<li><img src="<%=user.icon_url %>" width="36" height="36"/><%= link_to user.name, user_path(user) %>(<%= user.position %>)</li>
 						<% end %> 
                     </ul>
                 </div>
