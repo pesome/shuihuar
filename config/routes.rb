@@ -25,6 +25,8 @@ Blog::Application.routes.draw do
   get "user/login"
   get "user/logout"
   
+  #match "groups/show/:id"  => 'groups#show'
+   
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
