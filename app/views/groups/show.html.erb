@@ -1,66 +1,80 @@
+<div class="main">
+	
 <p id="notice"><%= notice %></p>
-<p>
-  <b>Name:</b>
-  <%= @group.name %>
-</p>
-<p>
-  <b>Description:</b>
-  <%= @group.description %>
-</p>
-<p>
-  <b>Label:</b>
-  <%= @group.label %>
-</p>
-<p>
-  <b>Is_public:</b>
-  <%= @group.is_public %>
-</p>
-<p>
-   <td><%= link_to 'Edit', edit_group_path(@group) %></td>
-</p>
-<h2>分类:</h2>
-<table>
-	<tr>
-	<% @group.categories.each do |category| %>
-    	<td><%= category.name %></td>
-	<% end %> 
-	</tr>   
-</table>
+	<div class="cont clearfix">
+            <div class="cont-left">
+                <div class="cont-left-1">
+                    <h3><%= @group.name %></h3>
+                    <ul class="ope-list">
+                        <li><i class="edit"></i><%= link_to '修改', edit_group_path(@group) %></li>
+                        <li><i class="create"></i><a href="#">创建任务</a></li>
+                        <li><i class="join"></i><a href="#">加入</a></li>
+                    </ul>
+                </div>
+                <div class="tag">
+                    <ul class="tag-list">
+                    		<% @group.categories.each do |category| %>
+    							<li><%= category.name %></li>
+							<% end %> 
+                    </ul>
+                    <a href="#" class="edit"><i></i>修改</a>
+                </div>
+                <div class="textarea-block">
+                    <textarea cols="70" rows="12"></textarea>
+                    <ul class="job">
+                        <li><a href="#">共<%=@group.tasks.size %>个任务</a></li>
+                        <li><a href="#">评论</a></li>
+                        <li><a href="#">修改记录</a></li>
+                        <li><a href="#">举报</a></li>
+                    </ul>
+                </div>
 
-<h2>Users:</h2>
-<table>
-<% @group.users.each do |user| %>
-<tr>
-    <td><%= user.name %></td>
-    <td><%= user.position %></td>
-    <td><%= user.icon_url %></td>
-</tr>   
-<% end %> 
-</table>
+                <div class="jobs">
+                    <div class="jobs-top">
+                        <h4>所有任务</h4>
+                    </div>
+                    <table class="jobs-pre">
+                        <thead>
+                            <tr>
+                                <th class="col-120">名称</th>
+                                <th class="col-60">状态</th>
+                                <th class="col-200">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+	                    	<% @group.tasks.each do |task| %>
+                            <tr>
+                                <td><%= task.name %></td>
+                                <td><span class="pre"><%= task.status %><span></td>
+                                <td><a href="#"><%= link_to "修改", edit_task_path(task)%></a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
+                            </tr>
+                            <% end %> 
+                        </tbody>
+                    </table>
+                </div>
 
-<h2>所有评论:</h2>
-<table>
-<% @group.group_reviews.each do |group_review| %>
-<tr>
-    <td><%= group_review.id %></td>
-    <td><%= group_review.context %></td>
-</tr>   
-<% end %> 
-</table>
-<h2>共有<%=@group.tasks.size %>个任务</h2>
-<h2>所有任务:</h2>
-<table>
-<% @group.tasks.each do |task| %>
-<tr>
-    <td><%= task.id %></td>
-    <td><%= task.name %></td>
-    <td><%= task.description %></td>
-    <td><%= link_to "编辑", edit_task_path(task)%></td>
-</tr>   
-<% end %> 
-</table>
-<%= current_user.id%>
-<%= link_to 'Add Task', edit_group_path(@group) %> 
+            </div>
+            <div class="cont-right">
+                <div class="team-role">
+                    <h4>相关个人</h4>
+                    <ul>
+                    	<% @group.users.each do |user| %>
+						<li><img src="<%=user.icon_url %>" width="36" height="36"/><a href="#"><%= user.name %>(<%= user.position %>)</a></li>
+						<% end %> 
+                    </ul>
+                </div>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+                <div class="team-self">
+                    <h4>相关团队</h4>
+                    <ul>
+                        <li><i></i><a href="#">社会协作平台开发</a></li>
+                        <li><i></i><a href="#">社会协作平台开发</a></li>
+                        <li><i></i><a href="#">社会协作平台开发</a></li>
+                        <li><i></i><a href="#">社会协作平台开发</a></li>
+                        <li><i></i><a href="#">社会协作平台开发</a></li>
+                        <li><i></i><a href="#">社会协作平台开发</a></li>
+                    </ul>
+                </div>
+            <div>
+        </div>
+</div>
