@@ -19,6 +19,8 @@ Blog::Application.routes.draw do
   end
   
   resources :tasks
+  
+  resources :apply_groups
 
   get "home/index"
   get "user/index"
