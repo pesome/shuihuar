@@ -1,3 +1,4 @@
+ # encoding: utf-8
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
@@ -14,7 +15,32 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-#    @user_group= Group.findby()
+    @user_group= Group.find_all_by_owner(@user.id )
+    followed_user = FollowUser.find_all_by_user_id(@user.id )
+    @follow_user = Array.new
+    
+    followed_user.each do |user|
+      followed = User.find(user.user_id)
+      @follow_user << followed
+    end
+    
+    followed_group = FollowGroup.find_all_by_user_id(@user.id )
+    @follow_group= Array.new
+    
+    followed_group.each do |group|
+      followed = Group.find(group.user_id)
+      @follow_group << followed
+    end
+    
+    
+  #  @followed_group = Group.find_all_by_owner(@user.id ).follow_groups()
+    
+    
+    if params[:idx] 
+        @choose_to_show = params[:idx]
+      else
+        @choose_to_show = 1
+      end
 
     respond_to do |format|
       format.html # show.html.erb
