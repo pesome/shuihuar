@@ -324,7 +324,7 @@ ul, li {list-style: none;}
 .join-team {
 	padding: 5px 10px;
 	display: inline;
-	margin-left: 60px;
+	margin-left: 40px;
 	border-radius: 2px;
 }
 .welfare-owner {
@@ -348,7 +348,7 @@ ul, li {list-style: none;}
 	border-bottom: 1px dotted #ccc;
 }
 .white-btn {
-	background: url(../images/like.png) -200px -80px no-repeat;
+	background: url(/assets/like.png) -200px -80px no-repeat;
 	display: block;
 	width: 58px;
 	height: 23px;
