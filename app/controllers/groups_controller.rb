@@ -81,4 +81,15 @@ class GroupsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def join
+    @user_groups = UserGroup.create(:user_id=>current_user.id, :group_id=>params[:id])
+
+    return render :json => {:status => 200, :success => true}
+  end
+
+  def concern
+    @follow_group = FollowGroup.create(:user_id => current_user.id, :group_id =>params[:id])
+    return render :json => {:status => 200, :success => true}
+  end
 end

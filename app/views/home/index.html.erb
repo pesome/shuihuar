@@ -28,15 +28,15 @@
     <% @benefit_groups.each do |benefit_group| %>
         <li>
           <div class="welfare-item">
-            <h3><%= benefit_group.name %><span class="button join-team">加入</span></h3>
-            <a href="#" class="welfare-link"><img src="<%= asset_path(benefit_group.image_url) %>" width="215" height="195" /></a>
-            <a href="#" class="white-btn">喜欢</a>
+            <h3><%= benefit_group.name %><span group_id='<%=benefit_group.id%>' class="button join-team">加入</span></h3>
+            <a href="#"  class="welfare-link"><img src="<%= asset_path(benefit_group.image_url) %>" width="215" height="195" /></a>
+            <a href="#" group_id='<%=benefit_group.id%>' class="white-btn">喜欢</a>
             <span class="like-add"><%= benefit_group.follow_groups.count %></span>
           </div>
           <div class="welfare-owner">
             <a href="#"><img src='<%= asset_path("home/u106_normal.png") %>'/></a>
             <span class="owner-name"><%= benefit_group.owner_user.name %></span>
-            <button class="button" style="float:right;margin-top:-1px;">关注</button>
+            <button class="button" user_id='<%=benefit_group.owner%>' style="float:right;margin-top:-1px;">关注</button>
           </div>
         </li>
     <% end %>
@@ -49,15 +49,15 @@
     <% @travel_groups.each do |travel_group| %>
         <li>
           <div class="travel-item">
-            <h3><%= travel_group.name %><span class="button join-team">加入</span></h3>
-            <a href="#" class="welfare-link"><img src="<%= asset_path(travel_group.image_url) %>" width="215" height="195" /></a>
-            <a href="#" class="white-btn">喜欢</a>
+            <h3><%= travel_group.name %><span group_id='<%=travel_group.id%>' class="button join-team">加入</span></h3>
+            <a href="#"  class="welfare-link"><img src="<%= asset_path(travel_group.image_url) %>" width="215" height="195" /></a>
+            <a href="#" group_id='<%=travel_group.id%>' class="white-btn">喜欢</a>
             <span class="like-add"><%= travel_group.follow_groups.count %></span>
           </div>
           <div class="travel-owner">
             <a href="#"><img src='<%= asset_path("home/u106_normal.png") %>'/></a>
-            <span class="owner-name"><%= travel_group.owner %></span>
-            <button class="button" style="float:right;margin-top:-1px;">关注</button>
+            <span class="owner-name"><%= travel_group.owner_user.name %></span>
+            <button class="button" user_id='<%=travel_group.owner%>' style="float:right;margin-top:-1px;">关注</button>
           </div>
         </li>
     <% end %>
@@ -70,15 +70,15 @@
     <% @it_groups.each do |it_group| %>
         <li>
           <div class="code-item">
-            <h3><%= it_group.name %><span class="button join-team">加入</span></h3>
+            <h3><%= it_group.name %><span group_id='<%=it_group.id%>' class="button join-team">加入</span></h3>
             <a href="#" class="welfare-link"><img src="<%= asset_path(it_group.image_url)  %>" width="215" height="195" /></a>
-            <a href="#" class="white-btn">喜欢</a>
-            <span class="like-add"><%= travel_group.follow_groups.count %></span>
+            <a href="#" group_id='<%=it_group.id%>' class="white-btn">喜欢</a>
+            <span class="like-add"><%= it_group.follow_groups.count %></span>
           </div>
           <div class="code-owner">
             <a href="#"><img src='<%= asset_path("home/u106_normal.png") %>'/></a>
-            <span class="owner-name"><%= travel_group.owner %></span>
-            <button class="button" style="float:right;margin-top:-1px;">关注</button>
+            <span class="owner-name"><%= it_group.owner_user.name %></span>
+            <button user_id='<%=it_group.owner%>' class="button" style="float:right;margin-top:-1px;">关注</button>
           </div>
         </li>
     <% end %>
@@ -171,6 +171,81 @@
     <div id="u50_rtf"></div>
   </div>
 </div>
+<%if user_signed_in? %>
+    <div class="login-in">
+      <img src="#"/>
+      <div class="login-man">
+        <h4>黄晓欣</h4>
+        <p>收到一个邀请</p>
+        <p>收到一个申请</p>
+      </div>
+      <ul class="login-remind">
+        <li>200<br>关注</li>
+        <li>400<br>好友</li>
+        <li>30<br>任务</li>
+      </ul>
+      <ul class="some-links">
+        <li><a href="#">创建团队</a></li>
+        <li><a href="#">我的团队</a></li>
+        <li><a href="#">邀请成员</a></li>
+      </ul>
+    </div>
+
+    <style type="text/css">
+        .login-in {position: absolute;top: 66px;left: 743px;width: 222px;height: 328px;
+            padding:10px 12px;
+            background-color: #FFF;border: 1px solid #CCC;}
+        .login-in img {
+            width: 110px;
+            height: 110px;
+            float: left;
+            border: 1px solid #CCC;
+        }
+        .login-in .login-man {
+            float: left;
+        }
+        .login-man h4, .login-man p {
+            margin-left:10px;
+        }
+        .login-man p {
+            line-height: 24px;
+            height:24px;
+            font-size: 14px;
+        }
+        .login-remind {
+            float: left;
+            width: 200px;
+        }
+        .login-remind li {
+            float: left;
+            width: 40px;
+            padding-top: 20px;
+            margin-right:12px;
+            margin-left:12px;
+            text-align: center;
+            height: 40px;
+            line-height: 20px;
+        }
+        .some-links {
+            clear: both;
+            width: 222px;
+            padding-top: 20px;
+        }
+        .some-links li {
+            height: 40px;
+            line-height: 40px;
+            border-top:1px solid #CCC;
+            text-align: center;
+        }
+        .some-links a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #33ccfa;
+        }
+    </style>
+
+
+<%else%>
 <div id="u51" class="u51_container"   >
   <div id="u51_img" class="u51_normal detectCanvas"></div>
   <div id="u52" class="u52" style="visibility:hidden;"  >
@@ -255,6 +330,7 @@
     <div id="u78_rtf"></div>
   </div>
 </div>
+<% end %>
 
 <div class="team-sort">
   <ul class="team-items">
