@@ -28,7 +28,7 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
     #@owner = @task
-    #@group = Group.find(params[:group_id])
+    @group = Group.find(params[:group_id])
     
     respond_to do |format|
       format.html # new.html.erb
@@ -45,7 +45,8 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
 
-    @task = Task.new(params[:task].merge(:user_id=>current_user).merge(:group_id=>Group.find('1')))
+    #@task = Task.new(params[:task].merge(:user_id=>current_user).merge(:group_id=>Group.find('1')))
+    @task = Task.new(params[:task].merge(:user_id=>current_user))
     #@task = Task.new(params[:task].merge(:user_id=>current_user).merge(:group_id=>params[:group_id]))
     #@task = Task.new(params[:task].merge(:user_id=>current_user).merge(:group_id=>@group.id))
 
