@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   # GET /groups.json
   def index
     @groups = Group.all
-
+    @users = User.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @groups }
@@ -16,6 +16,7 @@ class GroupsController < ApplicationController
   def show
     #Group.joins(:user,:task)
     @group = Group.find(params[:id])
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @group }

@@ -55,11 +55,9 @@
                     <ul class="team-lists">
                     	<% @groups.each do |group| %>
                         <li class="ls J_toggler">
-                            <label><%= group.name%></label>
+                            <label><%= link_to group.name, group %></label>
                             <ul class="tags-list">
                                 <li class="current"><%= group.label%></li>
-                                <li>公益</li>
-                                <li>APP</li>
                             </ul>
                             <div class="ope-lists">
                                 <a class="button join-btn" href="#"><i></i>加入</a>
@@ -71,19 +69,6 @@
                             简介：<%= group.description %>
                         </li>
 						<% end %>
-                        <li class="ls J_toggler">
-                            <label>一个鸡蛋的梦想</label>
-                            <ul class="tags-list">
-                                <li class="current">关爱</li>
-                                <li>公益</li>
-                                <li>APP</li>
-                            </ul>
-                            <div class="ope-lists">
-                                <a class="button join-btn" href="#"><i></i>加入</a>
-                                <a class="button user-btn-up" href="#"><i></i>展开</a>
-                            </div>
-                        </li>
-
                     </ul>
                 </div>
 
@@ -93,20 +78,12 @@
             <div class="cont-right">
                 <div class="team-role">
                     <h4>推荐关注</h4>
+                    <% @users.each do |user| %>
                     <ul>
-                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">李永亮(前端开发)</a>
-                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
-                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">李永亮(前端开发)</a>
-                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
-                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">李永亮(前端开发)</a>
-                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
-                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">马全华(前端开发)</a>
-                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
-                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">马全华(前端开发)</a>
-                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
-                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">马全华(前端开发)</a>
-                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
+                        <li><img src="<%= user.icon_url %>" width="36" height="36"/><%= link_to user.name, user %>&nbsp;
+                        <a href="#" class="button care-btn">关注</a></li>
                     </ul>
+                    <% end%>
                 </div>
             </div>
 
@@ -114,17 +91,7 @@
 
     </div>
 </body>
-
-<h1>Listing groups</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Label</th>
-    <th>Is_public</th>
-  </tr>
-
+<!--
 <% @groups.each do |group| %>
   <tr>
     <td><%= group.name %></td>
@@ -135,8 +102,8 @@
     <td><%= link_to 'Edit', edit_group_path(group) %></td>
     <td><%= link_to 'Destroy', group, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
-<% end %>
-</table>
+<% end %>-->
+
 
 <br />
 
