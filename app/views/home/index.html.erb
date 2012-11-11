@@ -170,7 +170,7 @@
 </div>
 <%if user_signed_in? %>
     <div class="login-in">
-      <img src="#"/>
+      <img src='<%= asset_path(current_user.icon_url) %>' />
       <div class="login-man">
         <h4><%=current_user.name%></h4>
         <p>收到一个邀请</p>
