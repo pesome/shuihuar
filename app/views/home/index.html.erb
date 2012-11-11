@@ -25,7 +25,7 @@
     <% @benefit_groups.each do |benefit_group| %>
         <li>
           <div class="welfare-item">
-            <h3><%= benefit_group.name %><span group_id='<%=benefit_group.id%>' class="button join-team">加入</span></h3>
+            <h3 class="welfare-h3"><%= link_to benefit_group.name, benefit_group %><span group_id='<%=benefit_group.id%>' class="button join-team">加入</span></h3>
             <a href="#"  class="welfare-link"><img src="<%= asset_path(benefit_group.image_url) %>" width="215" height="195" /></a>
             <a href="#" group_id='<%=benefit_group.id%>' class="white-btn">喜欢</a>
             <span class="like-add"><%= benefit_group.follow_groups.count %></span>
@@ -46,7 +46,7 @@
     <% @travel_groups.each do |travel_group| %>
         <li>
           <div class="travel-item">
-            <h3><%= travel_group.name %><span group_id='<%=travel_group.id%>' class="button join-team">加入</span></h3>
+            <h3><%= link_to travel_group.name, travel_group %><span group_id='<%=travel_group.id%>' class="button join-team">加入</span></h3>
             <a href="#"  class="welfare-link"><img src="<%= asset_path(travel_group.image_url) %>" width="215" height="195" /></a>
             <a href="#" group_id='<%=travel_group.id%>' class="white-btn">喜欢</a>
             <span class="like-add"><%= travel_group.follow_groups.count %></span>
@@ -67,7 +67,7 @@
     <% @it_groups.each do |it_group| %>
         <li>
           <div class="code-item">
-            <h3><%= it_group.name %><span group_id='<%=it_group.id%>' class="button join-team">加入</span></h3>
+            <h3><%= link_to it_group.name, it_group %><span group_id='<%=it_group.id%>' class="button join-team">加入</span></h3>
             <a href="#" class="welfare-link"><img src="<%= asset_path(it_group.image_url)  %>" width="215" height="195" /></a>
             <a href="#" group_id='<%=it_group.id%>' class="white-btn">喜欢</a>
             <span class="like-add"><%= it_group.follow_groups.count %></span>
@@ -182,8 +182,8 @@
         <li><%= current_user.tasks.count%><br>任务</li>
       </ul>
       <ul class="some-links">
-        <li><a href="#">创建团队</a></li>
-        <li><a href="#">我的团队</a></li>
+        <li><%= link_to "创建团队", new_group_path %></li>
+        <li><%= link_to "我的团队", groups_path %></li>
         <li><a href="#">邀请成员</a></li>
       </ul>
     </div>
