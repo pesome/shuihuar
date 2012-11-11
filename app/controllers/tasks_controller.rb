@@ -27,7 +27,9 @@ class TasksController < ApplicationController
   # GET /tasks/new.json
   def new
     @task = Task.new
-    @owner = @task.
+    #@owner = @task
+    @group = Group.find(params[:group_id])
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @task }
@@ -43,12 +45,14 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
 
-    @task = Task.new(params[:task].merge(:owner=>current_user).merge(:group_id=>Group.find('1')))
+    @task = Task.new(params[:task].merge(:user_id=>current_user))
+    @group = Group.find(@task.group_id)
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'task was successfully created.' }
-        format.json { render json: @task, status: :created, location: @task }
+        format.html { redirect_to @group, notice: 'task was successfully created.' }
+        #format.html { redirect_to @task, notice: 'task was successfully created.' }
+        #format.json { render json: @task, status: :created, location: @task }
       else
         format.html { render action: "new" }
         format.json { render json: @task.errors, status: :unprocessable_entity }
@@ -60,11 +64,12 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
-
+    @group = Group.find(@task.group_id)
+    
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        format.html { redirect_to @task, notice: 'task was successfully updated.' }
-        format.json { head :no_content }
+        format.html { redirect_to @group, notice: 'task was successfully updated.' }
+        #format.json { head :no_content }
       else
         format.html { render action: "edit" }
         format.json { render json: @task.errors, status: :unprocessable_entity }

@@ -1,13 +1,43 @@
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8;" />
+    <title>Team</title>
+    <link rel="stylesheet" type="text/css" href="/assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="/assets/team.css">
+</head>
+
 <div class="main">
-	
-<p id="notice"><%= notice %></p>
+
+ <div class="header clearfix">
+            <div class="logo">
+                <span class="logo-word">水花</span>
+                <span class="theme-desc">社会协作平台</span>
+            </div>
+            <div class="head-hot">
+                <a href="#" class="focus-idea">关注动态</a>
+                <span class="hot-team">热门</span>
+                <ul class="hot-list">
+                    <li><a href="#">公益</a></li>
+                    <li><a href="#">穷游</a></li>
+                    <li><a href="#">编程</a></li>
+                </ul>
+                <span class="hot-team group">小组</span>
+            </div>
+            <div class="search-list-wrap">
+                <input id="J_search" type="text" placeholder="team" class="input-normal input-search">
+                <input type="button" class="search-submit">
+                <ul class="search-list" id="J_search_list">
+                </ul>
+            </div>
+        </div>
+
 	<div class="cont clearfix">
             <div class="cont-left">
                 <div class="cont-left-1">
                     <h3><%= @group.name %></h3>
                     <ul class="ope-list">
                         <li><i class="edit"></i><%= link_to '修改', edit_group_path(@group) %></li>
-                        <li><i class="create"></i><a href="#">创建任务</a></li>
+                        <li><i class="create"></i><%= link_to '创建任务', :controller => "tasks", :action => "new" ,:group_id => @group.id %></li> 
                         <li><i class="join"></i><a href="#">加入</a></li>
                     </ul>
                 </div>
@@ -20,7 +50,7 @@
                     <a href="#" class="edit"><i></i>修改</a>
                 </div>
                 <div class="textarea-block">
-                    <textarea cols="70" rows="12"></textarea>
+                    <textarea cols="70" rows="12"><%=@group.description %></textarea>
                     <ul class="job">
                         <li><a href="#">共<%=@group.tasks.size %>个任务</a></li>
                         <li><a href="#">评论</a></li>
@@ -31,7 +61,7 @@
 
                 <div class="jobs">
                     <div class="jobs-top">
-                        <h4>所有任务</h4>
+                        <h4>所有任务</h4> <span class="pre"><%= notice %><span>
                     </div>
                     <table class="jobs-pre">
                         <thead>
@@ -45,7 +75,15 @@
 	                    	<% @group.tasks.each do |task| %>
                             <tr>
                                 <td><%= task.name %></td>
-                                <td><span class="pre"><%= task.status %><span></td>
+                                <td>
+                                	 <% if task.status == 1 then %>
+									      <span class="pre">未开始 <span>
+									 <%   elsif task.status == 2 then %>
+									      <span class="ing">进行中<span>
+									 <%   elsif task.status == 3 then %>
+									 	  <span class="done">已完成<span>
+									 <%   end %>
+                                </td>
                                 <td><a href="#"><%= link_to "修改", edit_task_path(task)%></a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
                             </tr>
                             <% end %> 
@@ -59,20 +97,17 @@
                     <h4>相关个人</h4>
                     <ul>
                     	<% @group.users.each do |user| %>
-						<li><img src="<%=user.icon_url %>" width="36" height="36"/><a href="#"><%= user.name %>(<%= user.position %>)</a></li>
+						<li><img src="<%=user.icon_url %>" width="36" height="36"/><%= link_to user.name, user_path(user) %>(<%= user.position %>)</li>
 						<% end %> 
                     </ul>
                 </div>
 
                 <div class="team-self">
-                    <h4>相关团队</h4>
+                    <h4>评论:</h4>
                     <ul>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
+                    	<% @group.group_reviews.each do |group_review| %>
+						    <li><%= group_review.id %>· <%= group_review.context %></li>
+						<% end %> 
                     </ul>
                 </div>
             <div>

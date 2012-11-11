@@ -163,7 +163,7 @@ ul, li {list-style: none;}
 }
 .search-list-wrap .search-submit{
     position: absolute;
-    background: url('../../Home_files/u49_normal.png');
+    background: url('../../../images/searchbtn.png');
     width:30px;
     height: 22px;
     border: none;
@@ -462,21 +462,18 @@ ul, li {list-style: none;}
 }
 
 .modal .content{
-    min-height: 80px;
+    padding:4px 20px;
 }
 
 .modal .bottom{
-    border-top:1px solid #ccc;
     height: 40px;
 }
 .modal .bottom .btn{
-    margin: 10px;
+    margin:6px 10px;
     float: right;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    display: block;
-    height: 20px;
-    line-height: 20px;
-    padding:0 15px;
-    text-decoration: none;
+}
+.content p {
+	text-align: center;
+	font-size: 16px;
+	line-height: 28px;
 }

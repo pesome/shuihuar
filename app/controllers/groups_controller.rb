@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   # GET /groups.json
   def index
     @groups = Group.all
-
+    @users = User.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @groups }
@@ -16,6 +16,7 @@ class GroupsController < ApplicationController
   def show
     #Group.joins(:user,:task)
     @group = Group.find(params[:id])
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @group }
@@ -80,5 +81,16 @@ class GroupsController < ApplicationController
       format.html { redirect_to groups_url }
       format.json { head :no_content }
     end
+  end
+
+  def join
+    @user_groups = UserGroup.create(:user_id=>current_user.id, :group_id=>params[:id])
+
+    return render :json => {:status => 200, :success => true}
+  end
+
+  def concern
+    @follow_group = FollowGroup.create(:user_id => current_user.id, :group_id =>params[:id])
+    return render :json => {:status => 200, :success => true}
   end
 end
