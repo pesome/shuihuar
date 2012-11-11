@@ -13,10 +13,19 @@ define(function (require, exports, module) {
 
     //join
     var Join = require('./join')
-    $('.join-team').click(function(){
+    $('.join-team').click(function () {
         new Join(this);
     });
 
+    //watch
+    var watch = require('./watch')
+    $('.J_watch').click(function () {
+        watch(123, 123, function (t) {
+            if (t.code == 200) {
+                $(this).text('已关注');
+            }
+        });
+    });
     // like
     var Like = require('./like');
     $('.J_like').click(function (e) {
