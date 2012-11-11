@@ -1,6 +1,6 @@
 Blog::Application.routes.draw do
   devise_for :users
-
+  #devise_for :users, :controllers => {:sessions => 'sessions', :registrations => :registrations}
   resources :users do
     resources :groups
     resources :tasks
@@ -19,12 +19,16 @@ Blog::Application.routes.draw do
   end
   
   resources :tasks
+  
+  resources :apply_groups
 
   get "home/index"
   get "user/index"
   get "user/login"
   get "user/logout"
-  
+
+  match ':controller(/:action(/:id))(.:format)'
+   
   # The priority is based upon order of creation:
   # first created -> highest priority.
   

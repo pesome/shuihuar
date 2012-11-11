@@ -80,4 +80,9 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def concern
+    @follow_user = FollowUser.create(:user_id => current_user.id, :followed_user_id =>params[:id])
+    return render :json => {:status => 200, :success => true}
+  end
 end

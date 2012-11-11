@@ -1,13 +1,97 @@
-<h1>Listing groups</h1>
+<head>
+    <title>Home</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="/assets/reset.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/teamlist.css" media="all" rel="stylesheet" type="text/css" />
+</head>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Label</th>
-    <th>Is_public</th>
-  </tr>
+<body>
+    <div class="main">
+        <div class="header clearfix">
+            <div class="logo">
+                <span class="logo-word">水花</span>
+                <span class="theme-desc">社会协作平台</span>
+            </div>
+            <div class="head-hot">
+                <a href="#" class="focus-idea">关注动态</a>
+                <span class="hot-team">热门</span>
+                <ul class="hot-list">
+                    <li><a href="#">公益</a></li>
+                    <li><a href="#">穷游</a></li>
+                    <li><a href="#">编程</a></li>
+                </ul>
+                <span class="hot-team group">小组</span>
+            </div>
+            <div class="search-list-wrap">
+                <input id="J_search" type="text" placeholder="team" class="input-normal input-search">
+                <input type="button" class="search-submit">
+                <ul class="search-list" id="J_search_list">
+                </ul>
+            </div>
+        </div>
 
+        <div class="cont clearfix">
+            <div class="cont-left">
+                <div class="team-sort">
+                    <div class="team-name">公益</div>
+                    <ul class="sort-list">
+                        <li><a href="#">敬老院</a></li>
+                        <li><a href="#">养老院</a></li>
+                        <li><a href="#">残联</a></li>
+                        <li><a href="#">精神病院</a></li>
+                    </ul>
+                </div>
+
+                <ul class="state-list">
+                    <li><a href="#">未开始(共<span>1</span>个)</a></li>
+                    <li><a href="#">进行中(共<span>2</span>个)</a></li>
+                    <li><a href="#">已完成(共<span>3</span>个)</a></li>
+                </ul>
+
+
+                <div class="team-items">
+                    <ul class="team-lists">
+                    	<% @groups.each do |group| %>
+                        <li class="ls J_toggler">
+                            <label><%= link_to group.name, group %></label>
+                            <ul class="tags-list">
+                                <li class="current"><%= group.label%></li>
+                            </ul>
+                            <div class="ope-lists">
+                                <a class="button join-btn" href="#"><i></i>加入</a>
+                                <a class="button user-btn-down" href="#"><i></i>展开</a>
+                            </div>
+                        </li>
+                        
+                        <li class="team-details">
+                            简介：<%= group.description %>
+                        </li>
+						<% end %>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="cont-right">
+                <div class="team-role">
+                    <h4>推荐关注</h4>
+                    <% @users.each do |user| %>
+                    <ul>
+                        <li><img src="<%= user.icon_url %>" width="36" height="36"/><%= link_to user.name, user %>&nbsp;
+                        <a href="#" class="button care-btn">关注</a></li>
+                    </ul>
+                    <% end%>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<!--
 <% @groups.each do |group| %>
   <tr>
     <td><%= group.name %></td>
@@ -18,8 +102,8 @@
     <td><%= link_to 'Edit', edit_group_path(group) %></td>
     <td><%= link_to 'Destroy', group, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
-<% end %>
-</table>
+<% end %>-->
+
 
 <br />
 
