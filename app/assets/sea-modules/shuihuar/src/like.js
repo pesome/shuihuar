@@ -3,15 +3,13 @@ define(function (require, exports, module) {
 
     var like = function(id,cb){
         cb();
-        return;
         $.ajax({
-            url:'',
+            url:'/groups/concern/'+id,
             data:{
-
             },
             dataType:'json'
         }).done(function(data){
-                cb();
+                cb(data);
             })
     }
 

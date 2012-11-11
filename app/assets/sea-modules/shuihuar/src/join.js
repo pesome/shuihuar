@@ -3,17 +3,14 @@ define(function (require, exports, module) {
         modal = require('./modal')
 
     var Join = function (btn, id) {
-        new modal('<p>申请已经提交</p>','申请加入').open();
-        return;
         $(btn).click(function () {
             $.ajax({
-                url:'',
+                url:'/groups/join/' + id,
                 data:{
-
                 },
                 dataType:'json'
-            }).done(function(){
-
+            }).done(function () {
+                    new modal('<p>申请已经提交</p>', '申请加入').open();
                 })
         });
     }
