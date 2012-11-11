@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=8;" />
     <title>Team List</title>
     <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="resources/css/team.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/teamlist.css">
 </head>
 <body>
     <div class="main">
@@ -33,110 +33,81 @@
 
         <div class="cont clearfix">
             <div class="cont-left">
-                <div class="cont-left-1">
-                    <h3>团队创意名称</h3>
-                    <ul class="ope-list">
-                        <li><i class="edit"></i><a href="#">修改</a></li>
-                        <li><i class="create"></i><a href="#">创建任务</a></li>
-                        <li><i class="join"></i><a href="#">加入</a></li>
-                    </ul>
-                </div>
-                <div class="tag">
-                    <ul class="tag-list">
-                        <li class="current">关爱</li>
-                        <li>公益</li>
-                        <li>APP</li>
-                    </ul>
-                    <a href="#" class="edit"><i></i>修改</a>
-                </div>
-                <div class="textarea-block">
-                    <textarea cols="70" rows="12"></textarea>
-                    <ul class="job">
-                        <li><a href="#">共6个任务</a></li>
-                        <li><a href="#">评论</a></li>
-                        <li><a href="#">修改记录</a></li>
-                        <li><a href="#">举报</a></li>
+                <div class="team-sort">
+                    <div class="team-name">公益</div>
+                    <ul class="sort-list">
+                        <li><a href="#">敬老院</a></li>
+                        <li><a href="#">养老院</a></li>
+                        <li><a href="#">残联</a></li>
+                        <li><a href="#">精神病院</a></li>
                     </ul>
                 </div>
 
-                <div class="jobs">
-                    <div class="jobs-top">
-                        <h4>所有任务</h4>
-                    </div>
-                    <table class="jobs-pre">
-                        <thead>
-                            <tr>
-                                <th class="col-120">名称</th>
-                                <th class="col-60">状态</th>
-                                <th class="col-200">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>社会协作平台开发</td>
-                                <td><span class="pre">未开始<span></td>
-                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
-                            </tr>
-                            <tr>
-                                <td>社会协作平台开发</td>
-                                <td><span class="ing">进行中<span></td>
-                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
-                            </tr>
-                            <tr>
-                                <td>社会协作平台开发</td>
-                                <td><span class="done">已完成<span></td>
-                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
-                            </tr>
-                            <tr>
-                                <td>社会协作平台开发</td>
-                                <td><span class="ing">进行中<span></td>
-                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
-                            </tr>
-                            <tr>
-                                <td>社会协作平台开发</td>
-                                <td><span class="ing">进行中<span></td>
-                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
-                            </tr>
-                            <tr>
-                                <td>社会协作平台开发</td>
-                                <td><span class="ing">进行中<span></td>
-                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
-                            </tr>
-                            <tr>
-                                <td>社会协作平台开发</td>
-                                <td><span class="ing">进行中<span></td>
-                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <ul class="state-list">
+                    <li><a href="#">未开始(共<span>1</span>个)</a></li>
+                    <li><a href="#">进行中(共<span>2</span>个)</a></li>
+                    <li><a href="#">已完成(共<span>3</span>个)</a></li>
+                </ul>
+
+
+                <div class="team-items">
+                    <ul class="team-lists">
+                        <li class="ls J_toggler">
+                            <label>一个鸡蛋的梦想</label>
+                            <ul class="tags-list">
+                                <li class="current">关爱</li>
+                                <li>公益</li>
+                                <li>APP</li>
+                            </ul>
+                            <div class="ope-lists">
+                                <a class="button join-btn" href="#"><i></i>加入</a>
+                                <a class="button user-btn-down" href="#"><i></i>展开</a>
+                            </div>
+                        </li>
+                        
+                        <li class="team-details">
+                            简介：这个公益活动是为了南方山村的孩子能每天吃上一个鸡蛋，是一个很有价值的事情。每一个孩子都值得去爱。
+                        </li>
+
+                        <li class="ls J_toggler">
+                            <label>一个鸡蛋的梦想</label>
+                            <ul class="tags-list">
+                                <li class="current">关爱</li>
+                                <li>公益</li>
+                                <li>APP</li>
+                            </ul>
+                            <div class="ope-lists">
+                                <a class="button join-btn" href="#"><i></i>加入</a>
+                                <a class="button user-btn-up" href="#"><i></i>展开</a>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
 
             </div>
+
+
             <div class="cont-right">
                 <div class="team-role">
-                    <h4>相关个人</h4>
+                    <h4>推荐关注</h4>
                     <ul>
-                        <li><img src="" width="36" height="36"/><a href="#">李永亮(前端开发)</a></li>
-                        <li><img src="" width="36" height="36"/><a href="#">李永亮(前端开发)</a></li>
-                        <li><img src="" width="36" height="36"/><a href="#">李永亮(前端开发)</a></li>
-                        <li><img src="" width="36" height="36"/><a href="#">马全华(前端开发)</a></li>
-                        <li><img src="" width="36" height="36"/><a href="#">马全华(前端开发)</a></li>
-                        <li><img src="" width="36" height="36"/><a href="#">马全华(前端开发)</a></li>
+                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">李永亮(前端开发)</a>
+                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
+                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">李永亮(前端开发)</a>
+                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
+                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">李永亮(前端开发)</a>
+                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
+                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">马全华(前端开发)</a>
+                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
+                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">马全华(前端开发)</a>
+                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
+                        <li><img src="resources/images/header.png" width="36" height="36"/><a href="#">马全华(前端开发)</a>
+                        &nbsp;&nbsp;<a href="#" class="button care-btn">关注</a></li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="team-self">
-                    <h4>相关团队</h4>
-                    <ul>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                        <li><i></i><a href="#">社会协作平台开发</a></li>
-                    </ul>
-                </div>
-            <div>
         </div>
 
     </div>
