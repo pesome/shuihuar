@@ -34,9 +34,9 @@
         <div class="cont clearfix">
             <div class="cont-left">
                 <div class="cont-left-1">
-                    <h3>团队创意名称</h3>
+                    <h3 id="J_team_title">团队创意名称</h3>
                     <ul class="ope-list">
-                        <li><i class="edit"></i><a href="#">修改</a></li>
+                        <li><i class="edit"></i><a href="javascript:;" id="J_edit_title">修改</a></li>
                         <li><i class="create"></i><a href="#">创建任务</a></li>
                         <li><i class="join"></i><a href="#">加入</a></li>
                     </ul>
@@ -75,7 +75,7 @@
                             <tr>
                                 <td>社会协作平台开发</td>
                                 <td><span class="pre">未开始<span></td>
-                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="#">分配</a></td>
+                                <td><a href="#">修改</a>&nbsp;&nbsp;&nbsp;<a href="javascript:;" class="J_patch">分配</a></td>
                             </tr>
                             <tr>
                                 <td>社会协作平台开发</td>
@@ -136,9 +136,20 @@
                         <li><i></i><a href="#">社会协作平台开发</a></li>
                     </ul>
                 </div>
-            <div>
+            </div>
         </div>
 
     </div>
 </body>
+<script type="text/javascript" src='../sea-modules/seajs/1.3.0-dev/sea-debug.js'></script>
+<script type="text/javascript">
+    seajs.config({
+        alias:{
+            jquery:'1.8.2'
+        },
+        base:'../sea-modules/'
+    })
+    seajs.use('shuihuar/src/team')
+    seajs.use('shuihuar/src/head')
+</script>
 </html>
