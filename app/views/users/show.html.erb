@@ -1,92 +1,85 @@
-<p id="notice"><%= notice %></p>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=8;" />
+    <title>Team List</title>
+    <link rel="stylesheet" type="text/css" href="/assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="/assets/user.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header clearfix">
+            <div class="logo">
+                <span class="logo-word">水花</span>
+                <span class="theme-desc">社会协作平台</span>
+            </div>
+            <div class="head-hot">
+                <a href="#" class="focus-idea">关注动态</a>
+                <span class="hot-team">热门</span>
+                <ul class="hot-list">
+                    <li><a href="#">公益</a></li>
+                    <li><a href="#">穷游</a></li>
+                    <li><a href="#">编程</a></li>
+                </ul>
+                <span class="hot-team group">小组</span>
+            </div>
+            <div class="search-list-wrap">
+                <input id="J_search" type="text" placeholder="team" class="input-normal input-search">
+                <input type="button" class="search-submit">
+                <ul class="search-list" id="J_search_list">
+                </ul>
+            </div>
+        </div>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
-<p>
-  <b>Qq:</b>
-  <%= @user.QQ %>
-</p>
-
-<p>
-  <b>Weibo:</b>
-  <%= @user.weibo %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @user.phone %>
-</p>
-
-<p>
-  <b>Gender:</b>
-  <%= @user.gender %>
-</p>
-
-<p>
-  <b>Company:</b>
-  <%= @user.company %>
-</p>
-
-<p>
-  <b>Label:</b>
-  <%= @user.label %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @user.city %>
-</p>
-
-<p>
-  <b>Destrict:</b>
-  <%= @user.destrict %>
-</p>
-
-<p>
-  <b>Icon url:</b>
-  <%= @user.icon_url %>
-</p>
-
-<p>
-  <b>Position:</b>
-  <%= @user.position %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @user.description %>
-</p>
-
-<h1>Listing groups</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Label</th>
-    <th>Is_public</th>
-  </tr>
-
-<% @user.groups.each do |group| %>
-  <tr>
-    <td><%= group.name %></td>
-    <td><%= group.description %></td>
-    <td><%= group.label %></td>
-    <td><%= group.is_public %></td>
-    <td><%= link_to 'Show', group %></td>
-    <td><%= link_to 'Edit', edit_group_path(group) %></td>
-    <td><%= link_to 'Destroy', group, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+        <div class="cont clearfix">
+            <div class="cont-left">
+                <div class="user-info">
+                    <a class="user-image" href="#"><img src="/assets/sunzhi.png" width="116" height="116" /></a>
+                    
+                    <p><span class="sex">
+                        <%if @user.gender == 1%>
+                           <%= "男"%>
+                        <%elsif%>
+                           <%= "女"%>
+                           <%end%>
+                        </span>&nbsp;&nbsp;<span class="address"><%=@user.city%>  <%=@user.destrict%></span></p>
+                    <p>公司：<%= @user.company%></p>
+                    <p>标签：<%= @user.label%></p>
+                    <a class="more-info" href="#">更多个人资料</a>
+                </div>
+                <div class="user-details">
+                    <ul class="tabs">
+                        <li><%=link_to "我的团队", :controller=>'users' , :action=>'show',:idx => 1%></li>
+                        <li><%=link_to "我的关注", :controller=>'users' , :action=>'show',:idx => 2%></li>
+                        <li><%=link_to "个人资料", :controller=>'users' , :action=>'show',:idx => 3%></li>
+                    </ul>
+                    <% if @choose_to_show == '1'%>  
+                      <%= render 'mygroup' %>
+                      <%elsif @choose_to_show == '2'%>
+                       <%= render 'myattention' %>
+                       <%elsif @choose_to_show == '3'%>
+                       <%= render 'detail' %>
+                 <%end%>
+                       
+            </div>
+        </div>
+        <style type="text/css">
+           .user-info img{width:116px; height:116px;}
+        </style>
+        <div class="cont-right">
+                
+            <div class="team-self">
+                <h4>推荐任务</h4>
+                <ul>
+                    <li><i></i><a href="#">一起做一架飞机</a></li>
+                    <li><i></i><a href="#">来吧，作一个专辑</a></li>
+                    <li><i></i><a href="#">拉丁舞培训</a></li>
+                    <li><i></i><a href="#">开源管理平台开发</a></li>
+                    <li><i></i><a href="#">学做饭</a></li>
+                    <li><i></i><a href="#">爱讲课，让学习更容易</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<div class="focus">
+    <h4>关注的人</h4>
+    <ul class="focus-item">
+        <% @follow_user.each do |user|%>
+                 
+        <li>
+            <%= image_tag (user.icon_url)%>
+            &nbsp;&nbsp;
+            <span>
+                <%= user.name%>
+            </span>
+            
+        </li>
+        <%end%>
+    </ul>
+
+    <h4>关注的团队</h4>
+    <ul class="focus-item">
+        <% @follow_group.each do |group|%>
+        <li>
+            <%= image_tag (group.image_url)%><span><%= group.name%></span>
+        </li>
+        <%end%>
+    </ul>
+    <style type="text/css"">
+    
+    </style>
+</div>

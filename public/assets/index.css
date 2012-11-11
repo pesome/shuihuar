@@ -1,7 +1,8 @@
 /* --- common --- */
 body {
-	background: rgba(246,246,246,1);
-}
+	background-color: #FFFFFF;
+	}
+
 h3, ul, li { margin:0; padding:0;font-weight: normal;}
 ul, li {list-style: none;}
 /* --- page header --- */
@@ -348,7 +349,7 @@ ul, li {list-style: none;}
 	border-bottom: 1px dotted #ccc;
 }
 .white-btn {
-	background: url(/assets/like.png) -200px -80px no-repeat;
+	background: url('/assets/like.png') -200px -80px no-repeat;
 	display: block;
 	width: 58px;
 	height: 23px;
@@ -419,64 +420,4 @@ ul, li {list-style: none;}
 }
 .slide-trigger .slide-trigger-item.current{
     border: rgba(1, 186, 227, 1) solid 2px;
-}
-
-.modal-bg {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: .5;
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-.modal{
-    position: fixed;
-    background-color: #ffffff;
-    font-size: 12px;
-    border-radius: 2px;
-    shadow:#000 4px 4px 4px;
-    left: 50%;
-    top:50%;
-}
-.modal .title{
-    height: 35px;
-    line-height: 35px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
-
-}
-.modal .title .title-text{
-    margin-left: 10px;
-    color: red;
-
-}
-.modal .title .close{
-    float: right;
-    color: #08C;
-    text-decoration: none;
-    margin-right: 10px;
-}
-.modal .title .close:hover{
-    text-decoration: underline;
-}
-
-.modal .content{
-    min-height: 80px;
-}
-
-.modal .bottom{
-    border-top:1px solid #ccc;
-    height: 40px;
-}
-.modal .bottom .btn{
-    margin: 10px;
-    float: right;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    display: block;
-    height: 20px;
-    line-height: 20px;
-    padding:0 15px;
-    text-decoration: none;
 }
