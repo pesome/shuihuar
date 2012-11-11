@@ -175,14 +175,14 @@
     <div class="login-in">
       <img src="#"/>
       <div class="login-man">
-        <h4>黄晓欣</h4>
+        <h4><%=current_user.name%></h4>
         <p>收到一个邀请</p>
         <p>收到一个申请</p>
       </div>
       <ul class="login-remind">
-        <li>200<br>关注</li>
-        <li>400<br>好友</li>
-        <li>30<br>任务</li>
+        <li><%= current_user.user_groups.count %><br>关注</li>
+        <li><%= current_user.follow_users.count %><br>好友</li>
+        <li><%= current_user.tasks.count%><br>任务</li>
       </ul>
       <ul class="some-links">
         <li><a href="#">创建团队</a></li>
