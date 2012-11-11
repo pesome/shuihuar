@@ -25,7 +25,7 @@ define(function (require, exports, module) {
                     </div>\
                     <div class="content">' + this.content + '</div>\
                     <div class="bottom">\
-                    <a class="btn" href="javascript:;">确定</a>\
+                    <a class="button btn" href="javascript:;">确定</a>\
                     </div>\
                 </div>');
             box.appendTo(body).css({
