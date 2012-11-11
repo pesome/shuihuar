@@ -1,0 +1,37 @@
+<div class="team-sort">
+                    <div class="team-name">全部共（<span>
+                        <%= @user_group.size%>
+                    </span>）个</div>
+                </div>
+                <ul class="state-list">
+                    <li><a href="#">未开始(共<span>0</span>个)</a></li>
+                    <li><a href="#">进行中(共<span><%= @user_group.size%></span>个)</a></li>
+                    <li><a href="#">已完成(共<span>0</span>个)</a></li>
+                </ul>
+                
+                <%@user_group.each do |group|%>
+                    <div class="cont-left-1">
+                    <h3><%=group.name%></h3>
+                    <ul class="ope-list">
+                        <li><i class="edit"></i><a href="#">编辑</a></li>
+                        <li><i class="invite"></i><a href="#">邀请</a></li>
+                        <li><i class="topic"></i><a href="#">评论</a></li>
+                    </ul>
+                    <table class="job-table">
+                        <tbody>
+                    <% group.tasks.each do |task|%>
+                        <tr>
+                            <td>任务：<%=task.name%></td>
+                            <td>
+                                <a class="button">编辑</a>
+                                <a class="button">分配</a>
+                                <a class="button">评论</a>
+                                <a class="button">完成</a>
+                                <a class="button">删除</a>
+                            </td>
+                        </tr>
+                    <%end%>
+                    </tbody>
+                   </table>
+                </div>
+                <%end%>
