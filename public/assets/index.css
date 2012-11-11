@@ -1,7 +1,8 @@
 /* --- common --- */
 body {
-	background: rgba(246,246,246,1);
-}
+	background-color: #FFFFFF;
+	}
+
 h3, ul, li { margin:0; padding:0;font-weight: normal;}
 ul, li {list-style: none;}
 /* --- page header --- */

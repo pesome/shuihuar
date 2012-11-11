@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_filter :authenticate_user!
+ # before_filter :authenticate_user!
   # GET /tasks
   # GET /tasks.json
   def index

@@ -1,70 +1,99 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+    <%= notice %>
+</p>
+<div id="wrap">
+    <div id="header">
+        <div id="header-top">
+            <p class="left">社会协作平台  </p>
+            <p class="center"> 关注动态    </p>
+            <p class="bellow">
+                <%= image_tag("/assets/images/u18_line.png")%>
+            </p>
+            <p class="heat"> 热门    </p>
+            <P class="heat-word">     公益        </p>
+            <P class="heat-word">     穷游         </p>
+            <P class="heat-word">    编程           </p>
+            <p class="bellow">
+                <%= image_tag("/assets/images/u18_line.png")%>
+            </p>
+            <p class="heat">        小组           </p>
+            <input class="input" type="text" value="team" class="input-text">
+            <p class="input-icon">
+                <%= image_tag("/assets/images/u24_normal.png")%>
+            </p>
+            <p class="split">
+                <%= image_tag("/assets/images/u0_line.png")%>
+            </p>
+            
+        </div>
+    </div>
+</div>
+
 
 <p>
-  <b>Name:</b>
-  <%= @user.name %>
+    <b>Name:</b>
+    <%= @user.name %>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
+    <b>Email:</b>
+    <%= @user.email %>
 </p>
 
 <p>
-  <b>Qq:</b>
-  <%= @user.QQ %>
+    <b>Qq:</b>
+    <%= @user.QQ %>
 </p>
 
 <p>
-  <b>Weibo:</b>
-  <%= @user.weibo %>
+    <b>Weibo:</b>
+    <%= @user.weibo %>
 </p>
 
 <p>
-  <b>Phone:</b>
-  <%= @user.phone %>
+    <b>Phone:</b>
+    <%= @user.phone %>
 </p>
 
 <p>
-  <b>Gender:</b>
-  <%= @user.gender %>
+    <b>Gender:</b>
+    <%= @user.gender %>
 </p>
 
 <p>
-  <b>Company:</b>
-  <%= @user.company %>
+    <b>Company:</b>
+    <%= @user.company %>
 </p>
 
 <p>
-  <b>Label:</b>
-  <%= @user.label %>
+    <b>Label:</b>
+    <%= @user.label %>
 </p>
 
 <p>
-  <b>City:</b>
-  <%= @user.city %>
+    <b>City:</b>
+    <%= @user.city %>
 </p>
 
 <p>
-  <b>Destrict:</b>
-  <%= @user.destrict %>
+    <b>Destrict:</b>
+    <%= @user.destrict %>
 </p>
 
 <p>
-  <b>Icon url:</b>
-  <%= @user.icon_url %>
+    <b>Icon url:</b>
+    <%= @user.icon_url %>
 </p>
 
 <p>
-  <b>Position:</b>
-  <%= @user.position %>
+    <b>Position:</b>
+    <%= @user.position %>
 </p>
 
 <p>
-  <b>Description:</b>
-  <%= @user.description %>
+    <b>Description:</b>
+    <%= @user.description %>
 </p>
-
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
