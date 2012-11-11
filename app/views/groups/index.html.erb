@@ -55,7 +55,7 @@
                     <ul class="team-lists">
                     	<% @groups.each do |group| %>
                         <li class="ls J_toggler">
-                            <label><%= group.name%></label>
+                            <label><%= link_to group.name, group %></label>
                             <ul class="tags-list">
                                 <li class="current"><%= group.label%></li>
                             </ul>
