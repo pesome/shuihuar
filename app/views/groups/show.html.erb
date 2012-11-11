@@ -7,7 +7,7 @@
                     <h3><%= @group.name %></h3>
                     <ul class="ope-list">
                         <li><i class="edit"></i><%= link_to '修改', edit_group_path(@group) %></li>
-                        <li><i class="create"></i><%= link_to '创建任务', new_group_path %></li>
+                        <li><i class="create"></i><%= link_to '创建任务', :controller => "tasks", :action => "new" ,:group_id => @group.id %></li> 
                         <li><i class="join"></i><a href="#">加入</a></li>
                     </ul>
                 </div>
