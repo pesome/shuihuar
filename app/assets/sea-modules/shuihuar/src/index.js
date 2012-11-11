@@ -11,19 +11,35 @@ define(function (require, exports, module) {
     var Search = require('./search').Search;
     new Search($("#J_search"), $('#J_search_list'));
 
+    //join
+    var Join = require('./join')
+    $('.join-team').click(function () {
+        new Join(this);
+    });
+
+    //watch
+    var watch = require('./watch')
+    $('.J_watch').click(function () {
+        watch(123, 123, function (t) {
+            if (t.code == 200) {
+                $(this).text('已关注');
+            }
+        });
+    });
+    // like
+    var Like = require('./like');
+    $('.J_like').click(function (e) {
+        var btn = $(this);
+        e.preventDefault();
+        Like.like(btn.attr('group_id'), function () {
+            var number = btn.next();
+            number.text(+number.text() + 1);
+        });
+    });
+
     return;
     //init login
     var Login = require('./log');
     new Login($());
-
-    // like
-    var Like = require('./like');
-    $('.J_like').click(function () {
-        var btn = $(this);
-        Like.like(btn.attr('group_id'), function () {
-            var number = btn.next();
-            number.text(number.text() + 1);
-        });
-    });
 
 });
