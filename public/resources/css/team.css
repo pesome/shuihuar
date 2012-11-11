@@ -1,0 +1,294 @@
+body {
+	background: rgba(246,246,246,1);
+}
+.main {
+	width:960px;
+	position: relative;
+	top:0;
+	left:50%;
+	margin-left:-480px;
+}
+.header {height: 44px;overflow:auto; zoom:1;border-bottom:1px solid #CCC;}
+.header .logo {float: left;width:224px; }
+.logo .logo-word {
+	padding:0px 15px;
+	font-family:"microsoft YaHei";
+	float: left;
+	font-size:30px;
+	font-weight:bold;
+	font-style:normal;
+	line-height: 40px;
+	text-decoration:none;
+	color:#2b9bea;
+}
+.logo .theme-desc {
+	line-height: 20px;
+	margin-top:10px;
+	display: block;
+	float: left;
+	padding:0px 15px;
+	border-left:1px solid #CCC;
+	font-family:"microsoft YaHei";
+	font-style:normal;
+	text-decoration:none;
+	color:#666;
+}
+.focus-idea {
+	font-family:"microsoft YaHei";
+	font-size:20px;
+	font-style:normal;
+	text-decoration:none;
+	color:#FF0099;
+	margin-top:6px;
+	margin-left:32px;
+	float: left;
+	display: block;
+	padding-right:20px;
+	border-right:1px solid #CCC;
+}
+.hot-team {
+	font-family:"microsoft YaHei";
+	font-size:20px;
+	font-style:normal;
+	text-decoration:none;
+	color:#666;
+	margin-top:6px;
+	margin-left:12px;
+	float: left;
+	display: block;
+	padding-right:20px;
+}
+.header .head-hot {float:left;width:480px;}
+.hot-list li {float: left; height: 40px; line-height: 40px; margin-right:20px;}
+.hot-list a {
+	font-family:"microsoft YaHei";
+	font-size:16px;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none;
+	color:#666666;
+}
+.hot-list a:hover {
+	color:#08c;
+	text-decoration: none;
+}
+.group {padding-left:10px;border-left:1px solid #CCC; margin-left:0;}
+.header .search-list-wrap {float:right;position: relative;}
+.input-normal {
+	border:1px solid #ccc;
+	padding:2px 3px;
+}
+.search-list-wrap{
+    position: absolute;
+    left: -12px;
+    top: 9px;
+    float: right;
+    width:240px;
+    height:27px;
+    z-index: 100;
+}
+.search-list-wrap .input-search{
+    width:100%;
+    height: 27px;
+}
+.search-list-wrap .search-submit{
+    position: absolute;
+    background: url('../../Home_files/u49_normal.png');
+    width:30px;
+    height: 22px;
+    border: none;
+    top:3px;
+    right: 3px;
+    cursor: pointer;
+}
+.search-list {
+    min-width: 240px;
+    border: solid 1px #cccccc;
+    background: #fff;
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 27px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.search-list li{
+    padding-left: 10px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.search-list li:hover,.search-list li.hover{
+    background: #efefef;
+    cursor: pointer;
+}
+.search-list .key{
+    color: red;
+}
+.cont {margin-top:20px;}
+.cont-left {width:670px;float: left;}
+.cont-left h3 {height: 30px; 
+	line-height: 30px;
+	float: left;
+	margin-right:20px;
+	padding-left: 10px;
+	font-size: 20px;
+	font-family:"microsoft YaHei";
+	color: #444;
+	font-weight: 400;
+}
+.ope-list {overflow: auto;}
+.ope-list li {float: left;
+	position: relative;
+	padding-left:20px;
+	line-height: 30px;
+	margin-right: 30px;
+}
+.ope-list i { width:10px;
+	height: 10px;
+	display: block;
+	position: absolute;
+	left: 5px;
+	top: 10px;
+	background-image: url(images/icon.png);
+	background-repeat: no-repeat;
+}
+.ope-list i.edit {
+	background-position: -68px -115px;
+}
+.ope-list i.create {
+	background-position: -116px -115px;
+}
+.ope-list i.join {
+	background-position: -18px -131px;
+}
+.ope-list a { 
+	color: #999;
+	font-size: 13px;
+	text-decoration: none;
+	font-family:"microsoft YaHei";
+	font-weight: bold;
+}
+.ope-list a:hover {
+	color: #08c;
+	text-decoration: none;
+	font-weight: bold;
+}
+.tag {
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+.tag .edit { font-size: 12px;color:#666;text-decoration: none;
+	font-family:"microsoft YaHei";
+	display: block;
+	float: left;
+	padding-left: 10px;
+}
+.tag i {
+	width:10px;
+	height: 10px;
+	margin-right: 5px;
+	display: inline-block;
+	background: url(images/icon.png) -68px -115px no-repeat;
+}
+.tag .edit:hover {text-decoration: none;color: #08c;}
+.tag-list {}
+.tag-list li {
+	float: left;
+	margin-right: 20px;
+	padding:0px 12px;
+	text-align: center;
+	font-size: 14px;
+	border-radius: 2px;
+	background-color: #c4ebfd;
+	color: #0199d4;
+}
+.tag-list li.current {
+	background-color: #EEE;
+	color: #6CF;
+}
+
+.textarea-block {
+	width: 660px;
+	margin-top:30px;
+}
+.textarea-block textarea {
+	border:1px solid #CCC;
+}
+.job li {
+	float: left;
+	margin-right: 20px;
+	line-height: 36px;
+	height: 36px;
+	padding-left: 10px;
+}
+.job a {
+	text-decoration: none;
+	color: #999;
+	font-size: 14px;
+	font-family:"microsoft YaHei";
+}
+.job a:hover {
+	color: #08c;
+	text-decoration: none;
+}
+.jobs {
+	margin-top:40px;
+}
+.jobs h4 {
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	width: 120px;
+	text-align: center;
+	color:#666;
+	border:1px solid #CCC;
+	border-bottom: 0 none;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,229,229,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+}
+.col-120 {
+	width: 30%;
+}
+.col-60 {
+	width: 20%;
+}
+.col-200 {
+	width: 50%;
+}
+.jobs .jobs-top {border-bottom:1px solid #CCC;}
+.jobs-pre {width:670px;border: 1px solid #CCC;border-bottom:0 none;margin-top:20px;}
+.jobs-pre thead tr { line-height: 30px;background-color: #e2edf6;border:1px solid #CCC;color:#444;}
+.jobs-pre th, .jobs-pre td {text-align: center;border-bottom: 1px solid #CCC;font-size: 14px;}
+.jobs-pre tbody tr {line-height: 30px;background-color: #FFF;border: 1px solid #CCC;color:#666;}
+.jobs-pre a {
+	color: #33ccfa;
+	text-decoration: none;
+	font-size: 14px;
+}
+.pre {color:green;}
+.ing {color:red;}
+.done {color:gray;}
+.cont-right {width:250px;float: right;}
+
+.team-role, .team-self {
+	width: 200px;
+	padding:20px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+}
+.team-self { margin-top: 30px;}
+.team-role img{display: block;float: left;margin-right:10px;}
+.team-role li, .team-self li {line-height: 40px;margin-bottom:2px;height: 40px;padding:2px 10px;vertical-align: middle;font-size: 14px;color: #666;}
+.team-self li {line-height: 30px;height: 30px;padding-left:20px;}
+.team-self i { width:10px;height: 10px;display: block;float: left;margin-top:10px;margin-left:0px;
+	background: url(images/icon.png) -38px -20px no-repeat;
+}
+.team-self a {margin-left: 5px;}
+.team-role a, .team-self a {display: block;float: left;font-size: 14px;color:#666;text-decoration: none;}
+.team-role a:hover, .team-self a:hover {text-decoration: none;color:#08c;}
+.team-role h4, .team-self h4 {line-height: 30px;margin-bottom:10px;background-color: #EFEFEF;color:#666;padding-left:10px;}
+
+
