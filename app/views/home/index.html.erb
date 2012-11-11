@@ -1,4 +1,24 @@
-<div id="main_container">
+<head>
+<link href="/assets/jquery-ui-themes.css" type="text/css" rel="stylesheet">
+    <link href="/assets/axure_rp_page.css" type="text/css" rel="stylesheet">
+    <link href="/assets/axurerp_pagespecificstyles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/index.css">
+    
+    <script type="text/javascript" src='/assets/sea-modules/seajs/1.3.0-dev/sea-debug.js'></script>
+<script type="text/javascript">
+    seajs.config({
+        alias:{
+            jquery:'1.8.2'
+        },
+        base:'/assets/sea-modules/'
+    })
+    seajs.use('shuihuar/src/index');
+    seajs.use('shuihuar/src/head');
+</script>
+</head>
+
+<body style="margin-left: 150px;">
+<div id="main_container" style="position: relative;">
 
 
 
@@ -8,15 +28,15 @@
     <% @benefit_groups.each do |benefit_group| %>
         <li>
           <div class="welfare-item">
-            <h3><%= benefit_group.name %><span class="button join-team">加入</span></h3>
-            <a href="#" class="welfare-link"><img src="<%= asset_path(benefit_group.image_url) %>" width="215" height="195" /></a>
-            <a href="#" class="white-btn">喜欢</a>
+            <h3><%= benefit_group.name %><span group_id='<%=benefit_group.id%>' class="button join-team">加入</span></h3>
+            <a href="#"  class="welfare-link"><img src="<%= asset_path(benefit_group.image_url) %>" width="215" height="195" /></a>
+            <a href="#" group_id='<%=benefit_group.id%>' class="white-btn">喜欢</a>
             <span class="like-add"><%= benefit_group.follow_groups.count %></span>
           </div>
           <div class="welfare-owner">
             <a href="#"><img src='<%= asset_path("home/u106_normal.png") %>'/></a>
             <span class="owner-name"><%= benefit_group.owner_user.name %></span>
-            <button class="button" style="float:right;margin-top:-1px;">关注</button>
+            <button class="button" user_id='<%=benefit_group.owner%>' style="float:right;margin-top:-1px;">关注</button>
           </div>
         </li>
     <% end %>
@@ -29,15 +49,15 @@
     <% @travel_groups.each do |travel_group| %>
         <li>
           <div class="travel-item">
-            <h3><%= travel_group.name %><span class="button join-team">加入</span></h3>
-            <a href="#" class="welfare-link"><img src="<%= asset_path(travel_group.image_url) %>" width="215" height="195" /></a>
-            <a href="#" class="white-btn">喜欢</a>
+            <h3><%= travel_group.name %><span group_id='<%=travel_group.id%>' class="button join-team">加入</span></h3>
+            <a href="#"  class="welfare-link"><img src="<%= asset_path(travel_group.image_url) %>" width="215" height="195" /></a>
+            <a href="#" group_id='<%=travel_group.id%>' class="white-btn">喜欢</a>
             <span class="like-add"><%= travel_group.follow_groups.count %></span>
           </div>
           <div class="travel-owner">
             <a href="#"><img src='<%= asset_path("home/u106_normal.png") %>'/></a>
-            <span class="owner-name"><%= travel_group.owner %></span>
-            <button class="button" style="float:right;margin-top:-1px;">关注</button>
+            <span class="owner-name"><%= travel_group.owner_user.name %></span>
+            <button class="button" user_id='<%=travel_group.owner%>' style="float:right;margin-top:-1px;">关注</button>
           </div>
         </li>
     <% end %>
@@ -50,15 +70,15 @@
     <% @it_groups.each do |it_group| %>
         <li>
           <div class="code-item">
-            <h3><%= it_group.name %><span class="button join-team">加入</span></h3>
+            <h3><%= it_group.name %><span group_id='<%=it_group.id%>' class="button join-team">加入</span></h3>
             <a href="#" class="welfare-link"><img src="<%= asset_path(it_group.image_url)  %>" width="215" height="195" /></a>
-            <a href="#" class="white-btn">喜欢</a>
-            <span class="like-add"><%= travel_group.follow_groups.count %></span>
+            <a href="#" group_id='<%=it_group.id%>' class="white-btn">喜欢</a>
+            <span class="like-add"><%= it_group.follow_groups.count %></span>
           </div>
           <div class="code-owner">
             <a href="#"><img src='<%= asset_path("home/u106_normal.png") %>'/></a>
-            <span class="owner-name"><%= travel_group.owner %></span>
-            <button class="button" style="float:right;margin-top:-1px;">关注</button>
+            <span class="owner-name"><%= it_group.owner_user.name %></span>
+            <button user_id='<%=it_group.owner%>' class="button" style="float:right;margin-top:-1px;">关注</button>
           </div>
         </li>
     <% end %>
@@ -82,34 +102,34 @@
   <ul class="slide-list">
     <li class="slide-item">
       <a href="#" class="">
-        <img src='<%= asset_path("switch.jpg") %>' alt="" width="720" height="350">
+        <img src='<%= asset_path("1.png") %>' alt="" width="720" height="350">
       </a>
     </li>
     <li class="slide-item">
       <a href="#" class="">
-        <img src='<%= asset_path("switch.jpg") %>' alt="" width="720" height="350">
+        <img src='<%= asset_path("2.png") %>' alt="" width="720" height="350">
       </a>
     </li>
     <li class="slide-item">
       <a href="#" class="">
-        <img src='<%= asset_path("switch.jpg") %>' alt="" width="720" height="350">
+        <img src='<%= asset_path("3.png") %>' alt="" width="720" height="350">
       </a>
     </li>
   </ul>
   <ul class="slide-trigger">
     <li class="slide-trigger-item">
       <a href="#" class="">
-        <img src='<%= asset_path("switch.jpg") %>' alt="" width="72" height="35">
+        <img src='<%= asset_path("1.png") %>' alt="" width="72" height="35">
       </a>
     </li>
     <li class="slide-trigger-item">
       <a href="#" class="">
-        <img src='<%= asset_path("switch.jpg") %>' alt="" width="72" height="35">
+        <img src='<%= asset_path("2.png") %>' alt="" width="72" height="35">
       </a>
     </li>
     <li class="slide-trigger-item">
       <a href="#" class="">
-        <img src='<%= asset_path("switch.jpg") %>' alt="" width="72" height="35">
+        <img src='<%= asset_path("3.png") %>' alt="" width="72" height="35">
       </a>
     </li>
   </ul>
@@ -151,6 +171,81 @@
     <div id="u50_rtf"></div>
   </div>
 </div>
+<%if user_signed_in? %>
+    <div class="login-in">
+      <img src="#"/>
+      <div class="login-man">
+        <h4>黄晓欣</h4>
+        <p>收到一个邀请</p>
+        <p>收到一个申请</p>
+      </div>
+      <ul class="login-remind">
+        <li>200<br>关注</li>
+        <li>400<br>好友</li>
+        <li>30<br>任务</li>
+      </ul>
+      <ul class="some-links">
+        <li><a href="#">创建团队</a></li>
+        <li><a href="#">我的团队</a></li>
+        <li><a href="#">邀请成员</a></li>
+      </ul>
+    </div>
+
+    <style type="text/css">
+        .login-in {position: absolute;top: 66px;left: 743px;width: 222px;height: 328px;
+            padding:10px 12px;
+            background-color: #FFF;border: 1px solid #CCC;}
+        .login-in img {
+            width: 110px;
+            height: 110px;
+            float: left;
+            border: 1px solid #CCC;
+        }
+        .login-in .login-man {
+            float: left;
+        }
+        .login-man h4, .login-man p {
+            margin-left:10px;
+        }
+        .login-man p {
+            line-height: 24px;
+            height:24px;
+            font-size: 14px;
+        }
+        .login-remind {
+            float: left;
+            width: 200px;
+        }
+        .login-remind li {
+            float: left;
+            width: 40px;
+            padding-top: 20px;
+            margin-right:12px;
+            margin-left:12px;
+            text-align: center;
+            height: 40px;
+            line-height: 20px;
+        }
+        .some-links {
+            clear: both;
+            width: 222px;
+            padding-top: 20px;
+        }
+        .some-links li {
+            height: 40px;
+            line-height: 40px;
+            border-top:1px solid #CCC;
+            text-align: center;
+        }
+        .some-links a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #33ccfa;
+        }
+    </style>
+
+
+<%else%>
 <div id="u51" class="u51_container"   >
   <div id="u51_img" class="u51_normal detectCanvas"></div>
   <div id="u52" class="u52" style="visibility:hidden;"  >
@@ -235,6 +330,7 @@
     <div id="u78_rtf"></div>
   </div>
 </div>
+<% end %>
 
 <div class="team-sort">
   <ul class="team-items">
@@ -260,17 +356,17 @@
   </ul>
 </div>
 
+<div class="team-sort2">
+<ul class="team-items">
+  <li class="team-title">编程</li>
+  <li><a href="#">宅男帝国</a></li>
+  <li><a href="#">Java之路</a></li>
+  <li><a href="#">Js之路</a></li>
+</ul>
+</div>
 </DIV>
 </DIV>
 
-<div class="team-sort2">
-  <ul class="team-items">
-    <li class="team-title">编程</li>
-    <li><a href="#">宅男帝国</a></li>
-    <li><a href="#">Java之路</a></li>
-    <li><a href="#">Js之路</a></li>
-  </ul>
-</div>
 
 </DIV>
 </DIV>
@@ -618,3 +714,5 @@
 </div>
 </div>
 <div class="preload"><img src='<%= asset_path("home/u0_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u2_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u4_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u6_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u8_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u11_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u14_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u16_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u20_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u24_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u26_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u27_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u30_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u43_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u46_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u49_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u51_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u54_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u57_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u61_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u65_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u68_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u69_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u70_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u72_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u74_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u75_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u77_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u85_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u88_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u92_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u93_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u95_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u98_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u106_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u130_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u134_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u146_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u150_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u158_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u162_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u195_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u207_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u216_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u219_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u223_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u229_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u233_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u266_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u278_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u280_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u282_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u286_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u292_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u301_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u302_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u303_line.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u311_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u313_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u318_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u325_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u327_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u342_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u348_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u356_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u364_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u373_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u380_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u384_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u388_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u390_normal.png") %>' width="1" height="1"/><img src='<%= asset_path("home/u396_line.png") %>' width="1" height="1"/></div>
+
+</body>

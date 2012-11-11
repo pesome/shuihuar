@@ -1,12 +1,10 @@
 define(function (require, exports, module) {
     var $ = require('jquery')
 
-    var watch = function (userid,fid,cb) {
+    var watch = function (fid,cb) {
         $.ajax({
-            url:'http://42.121.107.159/ajax/follow_user',
+            url:'/user/concern/'+fid,
             data:{
-                user_id:userid,
-                follower_id:fid
             },
             dataType:'json'
         }).done(function(data){

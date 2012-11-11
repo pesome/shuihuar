@@ -204,6 +204,7 @@ body {
 	border-radius: 2px;
 	background-color: #c4ebfd;
 	color: #0199d4;
+	font-family:"microsoft YaHei";
 }
 .tag-list li.current {
 	background-color: #EEE;
@@ -216,6 +217,7 @@ body {
 }
 .textarea-block textarea {
 	border:1px solid #CCC;
+	font-family:"microsoft YaHei";
 }
 .job li {
 	float: left;
@@ -261,7 +263,7 @@ body {
 .jobs .jobs-top {border-bottom:1px solid #CCC;}
 .jobs-pre {width:670px;border: 1px solid #CCC;border-bottom:0 none;margin-top:20px;}
 .jobs-pre thead tr { line-height: 30px;background-color: #e2edf6;border:1px solid #CCC;color:#444;}
-.jobs-pre th, .jobs-pre td {text-align: center;border-bottom: 1px solid #CCC;font-size: 14px;}
+.jobs-pre th, .jobs-pre td {text-align: center;font-family:"microsoft YaHei";border-bottom: 1px solid #CCC;font-size: 14px;}
 .jobs-pre tbody tr {line-height: 30px;background-color: #FFF;border: 1px solid #CCC;color:#666;}
 .jobs-pre a {
 	color: #33ccfa;
@@ -281,14 +283,14 @@ body {
 }
 .team-self { margin-top: 30px;}
 .team-role img{display: block;float: left;margin-right:10px;}
-.team-role li, .team-self li {line-height: 40px;margin-bottom:2px;height: 40px;padding:2px 10px;vertical-align: middle;font-size: 14px;color: #666;}
+.team-role li, .team-self li {line-height: 40px;font-family:"microsoft YaHei";margin-bottom:2px;height: 40px;padding:2px 10px;vertical-align: middle;font-size: 14px;color: #666;}
 .team-self li {line-height: 30px;height: 30px;padding-left:20px;}
 .team-self i { width:10px;height: 10px;display: block;float: left;margin-top:10px;margin-left:0px;
 	background: url(images/icon.png) -38px -20px no-repeat;
 }
 .team-self a {margin-left: 5px;}
-.team-role a, .team-self a {display: block;float: left;font-size: 14px;color:#666;text-decoration: none;}
+.team-role a, .team-self a {display: block;font-family:"microsoft YaHei";float: left;font-size: 14px;color:#666;text-decoration: none;}
 .team-role a:hover, .team-self a:hover {text-decoration: none;color:#08c;}
-.team-role h4, .team-self h4 {line-height: 30px;margin-bottom:10px;background-color: #EFEFEF;color:#666;padding-left:10px;}
+.team-role h4, .team-self h4 {font-family:"microsoft YaHei";line-height: 30px;margin-bottom:10px;background-color: #EFEFEF;color:#666;padding-left:10px;}
 
 
