@@ -8,8 +8,6 @@ define(function (require, exports, module) {
     new Slider(holder.find('.slide-trigger .slide-trigger-item'), holder.find('.slide-list .slide-item'))
 
     //init search
-    var Search = require('./search').Search;
-    new Search($("#J_search"), $('#J_search_list'));
 
     //join
     var Join = require('./join')
@@ -19,14 +17,14 @@ define(function (require, exports, module) {
 
     //watch
     var watch = require('./watch')
-    $('.J_watch').click(function () {
+    $('.welfare-owner .button').click(function () {
         watch($(this).attr('user_id'), function (t) {
             $(this).text('已关注');
         });
     });
     // like
     var Like = require('./like');
-    $('.J_like').click(function (e) {
+    $('.welfare-item .white-btn').click(function (e) {
         var btn = $(this);
         e.preventDefault();
         Like.like(btn.attr('group_id'), function () {

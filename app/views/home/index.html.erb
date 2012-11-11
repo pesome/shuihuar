@@ -31,7 +31,7 @@
             <span class="like-add"><%= benefit_group.follow_groups.count %></span>
           </div>
           <div class="welfare-owner">
-            <a href="#"><img src='<%= asset_path("home/u106_normal.png") %>'/></a>
+            <a href="#"><img src='/Home_files/u106_normal.png'/></a>
             <span class="owner-name"><%= benefit_group.owner_user.name %></span>
             <button class="button" user_id='<%=benefit_group.owner%>' style="float:right;margin-top:-1px;">关注</button>
           </div>
@@ -170,7 +170,7 @@
 </div>
 <%if user_signed_in? %>
     <div class="login-in">
-      <img src="#"/>
+      <img src='<%= asset_path(current_user.icon_url) %>' />
       <div class="login-man">
         <h4><%=current_user.name%></h4>
         <p>收到一个邀请</p>
