@@ -20,9 +20,8 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </div>
+    <%= f.hidden_field :status, :value=>1 %><br />
+  </div> 
   <div class="field">
     <%= f.hidden_field :group_id, :value=>@group.id %><br />
   </div> 
