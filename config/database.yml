@@ -16,7 +16,7 @@ development:
   pool: 5
   username: guest
   password: '123456'
-  host: '42.121.107.159'
+  host: '42.121.108.142'
   
 
 # Warning: The database defined as "test" will be erased and
@@ -29,7 +29,7 @@ test:
   pool: 5
   username: guest
   password: '123456'
-  host: '42.121.107.159'
+  host: '42.121.108.142'
 
 production:
   adapter: mysql2
@@ -38,4 +38,4 @@ production:
   pool: 5
   username: guest
   password: '123456'
-  host: '42.121.107.159'
+  host: '42.121.108.142'
